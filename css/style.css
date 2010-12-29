@@ -164,10 +164,11 @@ body {
   padding-bottom: 20px; }
 .post div, .post p, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   margin: 0;
-  padding: 0 10px 10px 10px;
-  line-height: 20px; }
+  padding: 0 10px 10px 10px; }
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  line-height: 1.6;
+  font-size: 12pt; }
 .post header {
   padding: 20px 10px 0 10px; }
 .post header h2 {
@@ -197,6 +198,12 @@ body {
 .post div div, .post div p, .post div h3, .post p div, .post p p, .post p h3 {
   padding-left: 0;
   padding-right: 0; }
+.post pre {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .post .c {
   clear: both; }
@@ -207,9 +214,17 @@ body {
   width: 66%;
   float: left; }
 .post .c3 {
+  width: 100%;
   float: left; }
 .post .l1 {
   margin-left: 33%; }
+.post pre {
+  background: #eee;
+  padding: 10px 20px 20px 20px;
+  overflow: hidden; }
+.post pre {
+  font-family: monaco, mono;
+  font-size: 8pt; }
 
 @media screen and (min-width: 660px) and (max-width: 960px) {
   .header, .post {

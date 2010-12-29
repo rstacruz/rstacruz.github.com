@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class='no-js'></html>
+<head>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<title>HAML and IE compatibility</title>
+<link href='/css/style.css' media='screen' rel='stylesheet' type='text/css' />
+<body>
+<article class='post'>
+<header>
+<h2>
+<a href='/2010/haml_and_ie_compatibility.html'>HAML and IE compatibility</a>
+</h2>
+</header>
+<p class="brief">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But how can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
+<hr />
+<div class="c c1">
+<h3>Implementing conditional comments: the helpers way</h3>
+<p>The solution isn&#8217;t that hard to accomplish! <span class="caps">HAML</span> lets you have helper functions that take in blocks which you can receive in your helper functions as <span class="caps">HTML</span>. I suppose we just put two and two together, and:</p>
+</div>
+<pre class="c2">
+module ConditionalHtmlHelper
+  # Implements the world-famous Paul Irish IE conditional comments HTML tag--in HAML.
+  # http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+  def cc_html(options={}, &amp;blk)
+    attrs = options.map { |(k, v)| " #{h k}='#{h v}'" }.join('')
+    [ "&lt;!--[if lt IE 7 ]&gt; &lt;html#{attrs} class='ie6'&gt; &lt;![endif]--&gt;",
+      "&lt;!--[if IE 7 ]&gt;    &lt;html#{attrs} class='ie7'&gt; &lt;![endif]--&gt;",
+      "&lt;!--[if IE 8 ]&gt;    &lt;html#{attrs} class='ie8'&gt; &lt;![endif]--&gt;",
+      "&lt;!--[if IE 9 ]&gt;    &lt;html#{attrs} class='ie9'&gt; &lt;![endif]--&gt;",
+      "&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html#{attrs}&gt; &lt;!--&lt;![endif]--&gt;",
+      capture_haml(&amp;blk).strip,
+      "&lt;/html&gt;"
+    ].join("\n")
+  end
+
+  def h(str); Rack::Utils.escape_html(str); end
+end
+
+# Assuming Main is your Sinatra app
+Main.helpers ConditionalHtmlHelper
+</pre>
+<p class="c c1">Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html</code>, use the new helper like so:</p>
+<pre class="c2">
+!!! 5
+!= cc_html(:lang =&gt; 'en') do
+  %head
+    %meta(charset='UTF-8')
+    %title Hello!
+
+  %body
+    ...
+</pre>
+<div class="c">
+<hr />
+</div>
+<pre class="c c2">
+.posts {
+    margin-left: 10px;
+    .ie6 &amp; { margin-left: 5px; }
+}
+</pre>
+<div class="c1">
+<h3>Oh, and one more thing&#8230;</h3>
+<p>This will make it dirt easy to implement IE-specific stuff in <span class="caps">SCSS</span>. Thanks to <a href="http://twitter.com/marcopalinar">@marcopalinar</a> for the tip.</p>
+</div>
+<div class="c">
+<hr />
+</div>
+<p class="c">That&#8217;s it! Aura now has all it&#8217;s views peppered with the conditional comments trick. Still no IE compatibility, though&#8230; that&#8217;ll come later As usual, you can check the demo site at aurademo.heroku.com.</p>
+</article>
+
+</body>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+</head>
