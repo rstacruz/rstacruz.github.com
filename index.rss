@@ -6,32 +6,14 @@
 <description></description>
 <dc:language>en</dc:language>
 <dc:rights>Copyright 2010</dc:rights>
-<pubDate>Thu, 30 Dec 2010 03:09:52 +0800</pubDate>
+<pubDate>Thu, 30 Dec 2010 03:19:06 +0800</pubDate>
 <item>
 <title>HAML and IE compatibility</title>
 <link>http://rstacruz.github.com/2010/haml_and_ie_compatibility.html</link>
 <description>
-<![CDATA[
-<div class='meta'>
-<div class='date'>
-<span class='year'>2010</span>
-<span class='month'>October 10</span>
-</div>
-<div class='category'>
-<em>Filed under</em>
-<strong>
-Ruby
-</strong>
-</div>
-</div>
-<header>
-<h2>
-<a href='/2010/haml_and_ie_compatibility.html'>HAML and IE compatibility</a>
-</h2>
-</header>
-<p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But how can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
+<![CDATA[<p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But how can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
 <section class="flush">
-<p><img src="/images/cc_ie_html.png" alt="" /></p>
+<p><img src="http://rstacruz.github.com/images/cc_ie_html.png" alt="" /></p>
 <div class="caption c1">
 <p><strong>Figure 1</strong>.<br />
 IE conditional comments allows you to target IE versions easily without any hacks. More info in <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish&#8217;s post</a><br />
@@ -101,8 +83,7 @@ Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html
 </pre>
 </section>
 <h3 class="c c2">That&#8217;s it!</h3>
-<p class="c c2">Aura now has all it&#8217;s views peppered with the conditional comments trick. Still no IE compatibility, though&#8230; that&#8217;ll come later. As usual, you can check the demo site at aurademo.heroku.com.</p>
-]]>
+<p class="c c2">Aura now has all it&#8217;s views peppered with the conditional comments trick. Still no IE compatibility, though&#8230; that&#8217;ll come later. As usual, you can check the demo site at aurademo.heroku.com.</p>]]>
 </description>
 <pubDate>Sun, 10 Oct 2010 00:00:00 +0000</pubDate>
 </item>
