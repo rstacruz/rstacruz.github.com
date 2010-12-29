@@ -38,7 +38,7 @@ html, body {
 
 button, body, td,
 input, textarea {
-  font-family: helvetica, sans-serif;
+  font-family: "droid sans", sans-serif;
   font-size: 1em; }
 
 body {
@@ -87,8 +87,8 @@ body {
 
 .header, .post {
   background: #fff;
-  width: 960px;
-  padding: 0 10px;
+  width: 930px;
+  padding: 10px;
   margin: 0 auto;
   zoom: 1; }
   .header:after, .post:after {
@@ -160,23 +160,25 @@ body {
 
 .post {
   margin-top: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 20px; }
+  margin-bottom: 10px; }
 .post div, .post p, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   margin: 0;
-  padding: 0 10px 10px 10px; }
+  padding: 0 0 20px 0; }
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  padding-bottom: 0;
-  line-height: 1.6;
+  padding-bottom: 5px;
+  line-height: 1.5;
   font-size: 12pt; }
+.post div {
+  padding-bottom: 0;
+  /* Anti-double vgut */ }
 .post header {
-  padding: 20px 10px 0 10px; }
+  padding: 30px 10px 15px 10px; }
 .post header h2 {
   font-family: 'droid sans';
   font-size: 24pt;
   text-shadow: 2px 2px 0 #eee;
-  padding: 20px 0 20px 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 .post header a {
   color: #333; }
 .post header a:hover {
@@ -189,66 +191,88 @@ body {
 .post .brief {
   font-family: "droid sans", sans-serif;
   line-height: 1.6; }
-.post div, .post p {
-  padding: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-.post div div, .post div p, .post div h3, .post p div, .post p p, .post p h3 {
-  padding-left: 0;
-  padding-right: 0; }
-.post pre {
-  padding: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
+.post .section, .post section {
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd; }
+.post .section, .post section {
+  zoom: 1;
+  clear: both; }
+  .post .section:after, .post section:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+.post .section, .post section {
+  margin: 0 -10px 20px -10px;
+  padding: 20px 10px 0 10px; }
+.post .section.alert, .post section.alert {
+  background: #606680;
+  color: #eee;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1); }
+.post .section.alert a, .post section.alert a {
+  color: #fff; }
+.post .section + .section, .post .section + section, .post section + .section, .post section + section {
+  margin-top: -21px; }
 
 .post .c {
   clear: both; }
+.post .c1, .post .c2, .post .c3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left; }
 .post .c1 {
-  width: 33%;
-  float: left; }
+  width: 290px; }
 .post .c2 {
-  width: 66%;
-  float: left; }
+  width: 600px; }
 .post .c3 {
-  width: 100%;
-  float: left; }
+  width: 910px; }
 .post .l1 {
-  margin-left: 33%; }
+  margin-left: 320px; }
+.post .l2 {
+  margin-left: 610px; }
+.post .fl {
+  margin-left: -10px; }
+.post .fr {
+  margin-right: -10px; }
+.post .c1.fl, .post .c1.fr {
+  width: 310px; }
+.post .c2.fl, .post .c2.fr {
+  width: 600px; }
+.post .c3.fl, .post .c3.fr {
+  width: 890px; }
 .post pre {
   background: #eee;
-  padding: 10px 20px 20px 20px;
-  overflow: hidden; }
+  color: #333;
+  padding: 10px;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 20px 0; }
 .post pre {
-  font-family: monaco, mono;
-  font-size: 8pt; }
+  font-family: 'droid sans mono', mono;
+  font-size: 7.5pt; }
 
+/*
 @media screen and (min-width: 660px) and (max-width: 960px) {
-  .header, .post {
-    width: 640px; }
-
-  .contact span {
-    display: none; }
-
-  .post .l1, .post .l2 {
-    margin-left: 0; }
-  .post .c1, .post .c2 {
-    width: 50%; } }
+  .header, .post { width: 640px; }
+  .contact span { display: none; }
+  .post { 
+    .l1, .l2 { margin-left: 0; }
+    .c1, .c2 { width: 50%; }
+  }
+}
 
 @media screen and (min-width: 1px) and (max-width: 660px) {
-  .header, .post {
-    width: 400px; }
-
-  .header h1 {
-    width: 100%; }
-
-  .contact {
-    width: 100%; }
-
-  .post .l1, .post .l2 {
-    margin-left: 0; }
-  .post .c1, .post .c2 {
-    width: 100%; } }
+  .header, .post { width: 400px; }
+  .header h1 { width: 100%; }
+  .contact { width: 100%; }
+  .post { 
+    .l1, .l2 { margin-left: 0; }
+    .c1, .c2 { width: 100%; }
+  }
+} */
