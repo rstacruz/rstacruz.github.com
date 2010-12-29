@@ -1,0 +1,234 @@
+div, dl, dt, dd, ul, ol, li, form, fieldset, input, blockquote, th, td, legend {
+  margin: 0;
+  padding: 0; }
+
+pre, p, blockquote, h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 1em 0; }
+
+h1 {
+  font-size: 1.4em; }
+
+h2 {
+  font-size: 1.3em; }
+
+h3 {
+  font-size: 1.2em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+h6 {
+  font-size: 0.9em; }
+
+ol, ul {
+  margin-left: 2em; }
+
+blockquote {
+  border-left: solid 2px #ccc;
+  padding: 0 1em;
+  margin-left: 0.2em;
+  color: #888; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+button, body, td,
+input, textarea {
+  font-family: helvetica, sans-serif;
+  font-size: 1em; }
+
+body {
+  font-size: 10pt;
+  line-height: 1.6;
+  background: white;
+  color: #333333; }
+
+#all {
+  margin: 0 auto;
+  width: auto;
+  position: relative; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "droid sans", sans-serif; }
+
+input, textarea {
+  line-height: 1.4; }
+
+textarea {
+  resize: vertical; }
+
+a {
+  color: #337799;
+  text-decoration: none; }
+
+a:visited {
+  color: #3882a8; }
+
+a:hover {
+  color: #2d6b89;
+  text-decoration: underline; }
+
+a img {
+  border: 0; }
+
+button {
+  cursor: pointer; }
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+body {
+  background: #333;
+  margin-bottom: 100px; }
+
+.header, .post {
+  background: #fff;
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+  zoom: 1; }
+  .header:after, .post:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+
+.header {
+  color: white;
+  background: #111;
+  margin-top: 100px; }
+.header {
+  zoom: 1; }
+  .header:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+.header h1 {
+  text-align: center;
+  font-size: 60pt;
+  margin: 0;
+  line-height: 400px; }
+.header h1 {
+  font-weight: bold;
+  float: left;
+  width: 33%; }
+
+.contact {
+  font-size: 8pt;
+  line-height: 1.4;
+  padding-top: 147px; }
+.contact {
+  zoom: 1;
+  float: left;
+  width: 66%; }
+  .contact:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+.contact dl {
+  display: block;
+  width: 25%;
+  float: left;
+  padding: 10px 0; }
+.contact dt {
+  font-weight: bold; }
+.contact a {
+  color: #444; }
+.contact a:hover {
+  text-decoration: none;
+  background: #333;
+  color: #aaa; }
+.contact strong {
+  margin-left: 0;
+  font-weight: normal;
+  color: #777; }
+
+.post {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px; }
+.post div, .post p, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  margin: 0;
+  padding: 0 10px 10px 10px;
+  line-height: 20px; }
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  padding-bottom: 0; }
+.post header {
+  padding: 20px 10px 0 10px; }
+.post header h2 {
+  font-family: 'droid sans';
+  font-size: 24pt;
+  text-shadow: 2px 2px 0 #eee;
+  padding: 20px 0 20px 0;
+  margin: 0; }
+.post .brief {
+  font-size: 13pt;
+  color: #7c84a6;
+  padding-bottom: 15px; }
+.post .brief {
+  font-family: "droid sans", sans-serif;
+  line-height: 1.6; }
+.post div, .post p {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+.post div div, .post div p, .post div h3, .post p div, .post p p, .post p h3 {
+  padding-left: 0;
+  padding-right: 0; }
+
+.post .c {
+  clear: both; }
+.post .c1 {
+  width: 33%;
+  float: left; }
+.post .c2 {
+  width: 66%;
+  float: left; }
+.post .c3 {
+  float: left; }
+.post .l1 {
+  margin-left: 33%; }
+
+@media screen and (min-width: 660px) and (max-width: 960px) {
+  .header, .post {
+    width: 640px; }
+
+  .contact span {
+    display: none; }
+
+  .post .l1, .post .l2 {
+    margin-left: 0; }
+  .post .c1, .post .c2 {
+    width: 50%; } }
+
+@media screen and (min-width: 1px) and (max-width: 660px) {
+  .header, .post {
+    width: 400px; }
+
+  .header h1 {
+    width: 100%; }
+
+  .contact {
+    width: 100%; }
+
+  .post .l1, .post .l2 {
+    margin-left: 0; }
+  .post .c1, .post .c2 {
+    width: 100%; } }
