@@ -176,6 +176,11 @@ body {
   text-shadow: 2px 2px 0 #eee;
   padding: 20px 0 20px 0;
   margin: 0; }
+.post header a {
+  color: #333; }
+.post header a:hover {
+  text-decoration: none;
+  color: #636984; }
 .post .brief {
   font-size: 13pt;
   color: #7c84a6;
