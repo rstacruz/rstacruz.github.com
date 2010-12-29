@@ -85,13 +85,13 @@ body {
   background: #333;
   margin-bottom: 100px; }
 
-.header, .post {
+.header, .post, .colophon {
   background: #fff;
   width: 930px;
   padding: 10px;
   margin: 0 auto;
   zoom: 1; }
-  .header:after, .post:after {
+  .header:after, .post:after, .colophon:after {
     content: '';
     clear: both;
     display: block;
@@ -102,7 +102,7 @@ body {
 
 .header {
   color: white;
-  background: #111;
+  background: rgba(0, 0, 0, 0.4);
   margin-top: 100px; }
 .header {
   zoom: 1; }
@@ -123,6 +123,28 @@ body {
   font-weight: bold;
   float: left;
   width: 33%; }
+
+.colophon {
+  font-size: 9pt; }
+  .colophon {
+    color: #888;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    width: 850px; }
+  .colophon h3, .colophon p {
+    margin: 0;
+    padding: 0; }
+  .colophon h3 {
+    color: #eee;
+    float: left;
+    margin-right: 50px; }
+  .colophon p {
+    float: left;
+    width: 50%;
+    padding-top: 2px; }
+  .colophon strong {
+    font-weight: normal;
+    color: #eee; }
 
 .contact {
   font-size: 8pt;

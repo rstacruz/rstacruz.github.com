@@ -48,7 +48,10 @@ end
 # Assuming Main is your Sinatra app
 Main.helpers ConditionalHtmlHelper
 </pre>
-<p class="c c1">Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html</code>, use the new helper like so:</p>
+<div class="c c1 caption">
+<p><strong>Usage in <span class="caps">HAML</span></strong><br />
+Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html</code>, use the new helper like so:</p>
+</div>
 <pre class="c2 fr">
 !!! 5
 != cc_html(:lang =&gt; 'en') do

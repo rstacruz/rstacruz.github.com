@@ -4,7 +4,7 @@
 <meta charset='UTF-8' />
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
 <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-<title>RSC</title>
+<title>Rico Sta. Cruz's blog</title>
 <link href='/css/style.css' media='screen' rel='stylesheet' type='text/css' />
 <body>
 <div class='header'>
@@ -108,7 +108,10 @@ end
 # Assuming Main is your Sinatra app
 Main.helpers ConditionalHtmlHelper
 </pre>
-<p class="c c1">Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html</code>, use the new helper like so:</p>
+<div class="c c1 caption">
+<p><strong>Usage in <span class="caps">HAML</span></strong><br />
+Now in your <span class="caps">HAML</span> layouts, instead of using <code>%html</code>, use the new helper like so:</p>
+</div>
 <pre class="c2 fr">
 !!! 5
 != cc_html(:lang =&gt; 'en') do
@@ -145,6 +148,19 @@ Main.helpers ConditionalHtmlHelper
 <p class="c c2">Aura now has all it&#8217;s views peppered with the conditional comments trick. Still no IE compatibility, though&#8230; that&#8217;ll come later. As usual, you can check the demo site at aurademo.heroku.com.</p>
 
 </article>
+<footer class='colophon'>
+<h3>Cheers!</h3>
+<p>
+I'm
+<strong>Rico Sta Cruz.</strong>
+I'm a designer by trade, musician by hobby, and Ruby hacker by day, saving the world one web app at a time.
+I am currently working with
+<a href='http://sinefunc.com'>Sinefunc, Inc.</a>
+as it's UI expert, co-founder, and people motivator.
+You should follow me on
+<a href='http://twitter.com/rstacruz'>twitter.</a>
+</p>
+</footer>
 
 </body>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
