@@ -7,14 +7,21 @@
 <title>HAML and IE compatibility</title>
 <link href='/css/style.css' media='screen' rel='stylesheet' type='text/css' />
 <body>
-<article class='post'>
+<article class='post post-2010-10-10'>
 <header>
 <h2>
 <a href='/2010/haml_and_ie_compatibility.html'>HAML and IE compatibility</a>
 </h2>
 </header>
 <p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But how can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
-<section>
+<section class="flush" style="height: 179px;">
+<p><img src="/images/cc_ie_html.png" alt="" /></p>
+<div class="caption abs c1 l2" style="top: 20px; right: 20px;">
+<p><strong>Figure 1</strong>.<br />
+IE conditional comments allows you to target IE versions easily without any hacks. More info in <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish&#8217;s post</a><br />
+<div></p>
+</section>
+<section class="pt2 nb main">
 <div class="c c1">
 <h3>Implementing conditional comments: the helpers way</h3>
 <p>The solution isn&#8217;t that hard to accomplish! <span class="caps">HAML</span> lets you have helper functions that take in blocks which you can receive in your helper functions as <span class="caps">HTML</span>. I suppose we just put two and two together, and:</p>

@@ -191,9 +191,18 @@ body {
 .post .brief {
   font-family: "droid sans", sans-serif;
   line-height: 1.6; }
+.post .caption {
+  font-size: 8pt;
+  border-top: solid 2px #aaa;
+  padding-top: 10px;
+  color: #666; }
+  .post .caption strong {
+    color: #333; }
 .post .section, .post section {
   border-top: solid 1px #ddd;
   border-bottom: solid 1px #ddd; }
+.post .section, .post section {
+  position: relative; }
 .post .section, .post section {
   zoom: 1;
   clear: both; }
@@ -209,16 +218,22 @@ body {
   margin: 0 -10px 20px -10px;
   padding: 20px 10px 0 10px; }
 .post .section.alert, .post section.alert {
-  background: #606680;
-  color: #eee;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1); }
-.post .section.alert a, .post section.alert a {
-  color: #fff; }
+  background: #fefaf0; }
+.post .section.alert, .post section.alert {
+  background: #fffff9; }
+.post .section.nb, .post section.nb {
+  border: 0; }
 .post .section + .section, .post .section + section, .post section + .section, .post section + section {
   margin-top: -21px; }
 
 .post .c {
   clear: both; }
+.post .pt1 {
+  padding-top: 20px; }
+.post .pt2 {
+  padding-top: 40px; }
+.post .pt3 {
+  padding-top: 60px; }
 .post .c1, .post .c2, .post .c3 {
   margin-left: 10px;
   margin-right: 10px;
@@ -241,10 +256,23 @@ body {
   width: 310px; }
 .post .c2.fl, .post .c2.fr {
   width: 600px; }
-.post .c3.fl, .post .c3.fr {
-  width: 890px; }
+.post .flush {
+  width: 950px;
+  margin-left: -10px;
+  margin-right: -10px; }
+.post .nov {
+  margin-bottom: 0; }
+.post .abs {
+  position: absolute; }
+.post section.flush {
+  padding: 0;
+  border: 0;
+  margin-bottom: 10px; }
+.post section.flush p {
+  margin: 0;
+  padding: 0; }
 .post pre {
-  background: #eee;
+  background: #e0eaf0;
   color: #333;
   padding: 10px;
   overflow: hidden;
@@ -253,6 +281,22 @@ body {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 0 20px 0; }
+.post pre {
+  border: solid 1px #ccc; }
+.post pre {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px; }
+.post pre {
+  -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
+.post pre {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
 .post pre {
   font-family: 'droid sans mono', mono;
   font-size: 7.5pt; }
@@ -276,3 +320,8 @@ body {
     .c1, .c2 { width: 100%; }
   }
 } */
+.post-2010-10-10 section.flush {
+  -moz-box-shadow: 0 4px 4px #eeeeee;
+  -webkit-box-shadow: 0 4px 4px #eeeeee;
+  -o-box-shadow: 0 4px 4px #eeeeee;
+  box-shadow: 0 4px 4px #eeeeee; }
