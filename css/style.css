@@ -114,7 +114,8 @@ body {
   width: 950px;
   padding: 0; }
 .header {
-  zoom: 1; }
+  zoom: 1;
+  position: relative; }
   .header:after {
     content: '';
     clear: both;
@@ -123,23 +124,27 @@ body {
     height: 0;
     visibility: hidden;
     zoom: 1; }
-.header h1 {
-  text-align: center;
-  font-size: 60pt;
-  margin: 0;
-  line-height: 400px; }
-.header h1 {
-  font-weight: bold;
-  float: left;
-  width: 33%; }
+.header a.home {
+  position: absolute;
+  top: 0;
+  left: -75px; }
+.header a.home {
+  width: 75px;
+  height: 75px; }
+.header a.home {
+  text-indent: -9999px; }
+.header a.home {
+  background: url(/images/rsc.png) 10px 10px no-repeat; }
+
+body.page-post .header .contact {
+  padding-bottom: 40px; }
 
 .contact {
   margin-left: -75px;
   padding-left: 95px;
   border-top: solid 1px rgba(255, 255, 255, 0.1);
   padding-top: 10px;
-  padding-bottom: 130px;
-  background: url(/images/rsc.png) 10px 10px no-repeat; }
+  padding-bottom: 130px; }
   .contact {
     font-size: 8pt;
     line-height: 1.4; }
