@@ -456,6 +456,26 @@ body.page-post .header .contact {
   color: #7c84a6;
   font-weight: normal; }
 
+code {
+  font-family: "droid sans mono", monaco, consolas, monospace;
+  color: #636984;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2); }
+code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px; }
+code {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px; }
+code {
+  -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+  -o-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1); }
+
 .post .c {
   clear: both; }
 .post .pt1 {
@@ -528,7 +548,7 @@ body.page-post .header .contact {
 .post pre {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
 .post pre {
-  font-family: 'droid sans mono', mono;
+  font-family: "droid sans mono", monaco, consolas, monospace;
   font-size: 8pt; }
 
 /*
