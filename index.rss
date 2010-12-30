@@ -6,12 +6,12 @@
 <description></description>
 <dc:language>en</dc:language>
 <dc:rights>Copyright 2010</dc:rights>
-<pubDate>Thu, 30 Dec 2010 17:45:44 +0800</pubDate>
+<pubDate>Thu, 30 Dec 2010 17:52:46 +0800</pubDate>
 <item>
 <title>HAML and IE compatibility</title>
 <link>http://rstacruz.github.com/2010/haml_and_ie_compatibility.html</link>
 <description>
-<![CDATA[<p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But how can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
+<![CDATA[<p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
 <section class="flush">
 <p><img src="http://rstacruz.github.comimages/cc_ie_html.png" alt="" /></p>
 <p class="caption c1"><strong>Figure 1</strong>.<br />
