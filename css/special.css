@@ -1,9 +1,6 @@
 .post-2010-10-10 section.flush {
-  -moz-box-shadow: 0 4px 4px #eeeeee;
-  -webkit-box-shadow: 0 4px 4px #eeeeee;
-  -o-box-shadow: 0 4px 4px #eeeeee;
-  box-shadow: 0 4px 4px #eeeeee;
-  height: 179px; }
+  height: 179px;
+  border-bottom: solid 2px #ddd; }
 .post-2010-10-10 section.flush .caption {
   position: absolute;
   top: 20px;
