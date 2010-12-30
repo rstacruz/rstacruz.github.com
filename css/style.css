@@ -197,13 +197,13 @@ body {
   padding-bottom: 100px;
   padding-top: 30px; }
 
-.header, .post, .colophon {
+.header, .post, .colophon, section.comments {
   background: #fff;
   width: 930px;
   padding: 10px;
   margin: 0 auto;
   zoom: 1; }
-  .header:after, .post:after, .colophon:after {
+  .header:after, .post:after, .colophon:after, section.comments:after {
     content: '';
     clear: both;
     display: block;
@@ -211,6 +211,9 @@ body {
     height: 0;
     visibility: hidden;
     zoom: 1; }
+
+section.comments {
+  margin-bottom: 10px; }
 
 .header {
   background: transparent;
@@ -347,7 +350,7 @@ body.page-post .header .contact {
   color: #333; }
 .post header a:hover {
   text-decoration: none;
-  color: #636984; }
+  color: #a61911; }
 .post .brief {
   font-size: 13pt;
   color: #7c84a6;
