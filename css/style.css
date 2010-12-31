@@ -436,6 +436,8 @@ body.page-post .header header {
   line-height: 22pt; }
 #footer a, #footer a:visited {
   color: #555; }
+#footer a:hover {
+  color: #aaa; }
 
 .post {
   margin-top: 10px;
