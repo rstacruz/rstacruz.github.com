@@ -418,6 +418,8 @@ body.page-post .header header {
   text-align: right;
   font-size: 24pt;
   line-height: 22pt; }
+#footer a, #footer a:visited {
+  color: #555; }
 
 .post {
   margin-top: 10px;
