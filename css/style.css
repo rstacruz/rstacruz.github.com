@@ -197,13 +197,13 @@ body {
   padding-bottom: 100px;
   padding-top: 30px; }
 
-.header, .post, .colophon, section.comments {
+.header, .post, .colophon, section.comments, #footer {
   background: #fff;
   width: 930px;
   padding: 10px;
   margin: 0 auto;
   zoom: 1; }
-  .header:after, .post:after, .colophon:after, section.comments:after {
+  .header:after, .post:after, .colophon:after, section.comments:after, #footer:after {
     content: '';
     clear: both;
     display: block;
@@ -299,30 +299,119 @@ body.page-post .header .contact {
     border-bottom: solid 1px rgba(255, 255, 255, 0.4); }
   .contact strong {
     margin-left: 0;
-    font-weight: normal;
+    font-weight: normal; }
+  .contact strong {
     color: rgba(255, 255, 255, 0.6); }
 
 .colophon {
   font-size: 9pt; }
-  .colophon {
-    color: #888;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 50px 20px;
-    width: 910px; }
-  .colophon h3, .colophon p {
-    margin: 0;
-    padding: 0; }
-  .colophon h3 {
-    color: #eee;
-    float: left;
-    width: 155.333px; }
-  .colophon p {
-    float: left;
-    width: 435px;
-    padding-top: 2px; }
-  .colophon strong {
-    font-weight: normal;
-    color: #eee; }
+.colophon {
+  color: #888;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 120px 20px; }
+.colophon {
+  width: 910px;
+  position: relative; }
+.colophon {
+  margin-top: 20px; }
+.colophon .before {
+  padding-top: 9px; }
+  .colophon .before {
+    border-top: solid 1px rgba(255, 255, 255, 0.1); }
+  .colophon .before {
+    display: block;
+    width: 1005px; }
+  .colophon .before {
+    position: absolute;
+    top: -10px;
+    left: -75px; }
+.colophon .before span {
+  width: 75px;
+  line-height: 24px;
+  display: block; }
+.colophon .before span {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center; }
+.colophon .before span {
+  color: rgba(238, 238, 238, 0.2); }
+.colophon h3, .colophon p {
+  margin: 0;
+  padding: 0; }
+.colophon h3 {
+  float: left;
+  width: 145.333px;
+  margin-right: 10px; }
+.colophon h3 {
+  font-size: 48pt;
+  line-height: 48pt;
+  text-align: center; }
+.colophon h3 {
+  color: rgba(238, 238, 238, 0.2); }
+.colophon .info {
+  float: left;
+  width: 290px;
+  padding-top: 2px; }
+.colophon .info {
+  margin-right: 20px; }
+.colophon .links {
+  float: left;
+  width: 290px;
+  padding-top: 2px; }
+.colophon strong {
+  font-weight: normal;
+  color: #eee; }
+.colophon p {
+  padding-bottom: 10px; }
+
+#footer {
+  text-align: left;
+  background: transparent; }
+#footer {
+  margin-top: 0px;
+  zoom: 1; }
+  #footer:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+    zoom: 1; }
+#footer {
+  color: #777;
+  font-size: 8pt;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); }
+#footer strong {
+  font-weight: bold;
+  color: #eee; }
+#footer div {
+  padding: 10px;
+  width: 135.333px;
+  float: left; }
+#footer div {
+  border-top: solid 1px rgba(255, 255, 255, 0.1); }
+#footer .lol {
+  margin-left: -85px;
+  width: 75px;
+  text-indent: 10px; }
+#footer .lol {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.1); }
+#footer .lol span {
+  font-size: 24pt;
+  line-height: 36pt; }
+#footer .lol, #footer .copyright {
+  border-top: solid 2px rgba(255, 255, 255, 0.1); }
+#footer .copyright {
+  margin-left: -10px;
+  padding-left: 20px; }
+#footer .wide {
+  width: 290.667px; }
+#footer .last {
+  padding-right: 10px;
+  text-align: right;
+  font-size: 24pt;
+  line-height: 22pt; }
 
 .post {
   margin-top: 10px;
