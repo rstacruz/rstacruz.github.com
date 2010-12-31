@@ -498,6 +498,24 @@ body.page-post .header .contact {
   height: 60px; }
 .post .meta {
   background: url(/images/post-glyph.png) 0 20px no-repeat; }
+.post .meta .date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+.post .meta .date {
+  width: 300px;
+  height: 33px; }
+.post .meta .date:hover {
+  text-decoration: none; }
+.post .meta .date:hover .year {
+  background: #111; }
+.post .meta .date:hover .month {
+  color: #636984; }
+.post .meta .date:hover .month:after {
+  content: '>';
+  margin-left: 20px;
+  color: #7c84a6; }
 .post .meta .year {
   position: absolute;
   top: 20px;
@@ -528,26 +546,40 @@ body.page-post .header .contact {
 .post .meta .category {
   position: absolute;
   top: 20px;
-  padding-bottom: 10px; }
+  padding-bottom: 0px; }
 .post .meta .category {
-  width: 620px;
-  left: 85px; }
+  width: 464px;
+  left: 95px; }
 .post .meta .category {
-  padding-left: 310px; }
+  padding-left: 466px; }
 .post .meta .category {
   border-bottom: solid 1px #ddd; }
 .post .meta .category {
   line-height: 33px; }
+.post .meta .category em, .post .meta .category strong {
+  float: left;
+  display: block; }
+.post .meta .category em, .post .meta .category strong {
+  padding-bottom: 10px; }
 .post .meta .category em {
   font-style: normal;
-  font-weight: bold;
+  font-weight: bold; }
+.post .meta .category em {
   font-size: 8pt;
-  text-transform: uppercase;
+  text-transform: uppercase; }
+.post .meta .category em {
+  text-align: right; }
+.post .meta .category em {
+  width: 135.333px;
   margin-right: 10px; }
 .post .meta .category strong {
   font-style: normal;
   color: #7c84a6;
   font-weight: normal; }
+.post .meta .category strong {
+  border-left: solid 1px #ddd; }
+.post .meta .category strong {
+  padding-left: 10px; }
 
 code {
   font-family: "droid sans mono", monaco, consolas, monospace;
