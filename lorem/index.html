@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Lorem ipsum dolor sit amet.com &mdash; Filler text generator</title>
+<meta http-equiv="Content-Type"		content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Language"	content="en-us" />
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="assets/style.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+<body>
+<div id="all">
+
+
+	
+	<div id="head">
+		<h1>Filler text generator</h1>
+		<a href="javascript:void(0);" onclick="toggleDisplay($('about'))">
+		[info&hellip;]</a>
+	</div>
+	
+	<div id="about" style="display: none;"><div>
+		<h2>Lorem ipsum dolor sit amet.com</h2>
+		<p>This is a random text generator to make pretty <strong>filler text</strong>.
+		Perfect for use in design mockups to put focus on the visual layout,
+		instead of distracting with readable text.</p>
+		
+		<p>For more information, check Wikipedia's article on <a 
+		href="http://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a>.
+		
+		<p>Purely coded in JavaScript. This means you can save this page
+		locally (File &rarr; Save As...) for offline use.</p>
+
+		<a href="javascript:void(0);" class="info-button" onclick="toggleDisplay($('about'))">&times;</a>
+	</div></div>
+	
+	
+	<div id="controls">
+	
+	    <div id="option-language" class="option-item">
+			<label for="optGen">Language</label>
+			<select id="optGen">
+				<option value="latin" selected="1">lorem ipsum</option>
+				<option value="english">english</option>
+				<option value="jabberwock">jabberwock</option>
+				<option value="tagalog">tagalog</option>
+			</select>
+		</div>
+	    
+	    <div id="option-count" class="option-item">
+			<label for="optParaCount">Count</label>
+			<select id="optParaCount">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" selected="1">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+			</select>
+		</div>
+
+		
+		
+	    <div id="option-length" class="option-item">
+			<label for="optLen">Length</label>
+			<select id="optLen">
+				<option value="0.01">sentence</option>
+				<option value="1">short</option>
+				<option value="1.5" selected="1">medium</option>
+				<option value="2">long</option>
+				<option value="2.7">massive</option>
+				<option value="3.5">collosal</option>
+			</select>
+		</div>
+		
+		
+		<div id="text-area">
+			<textarea id="textOut"></textarea>
+		</div>
+		
+		<a href="javascript:void(0);" onclick="toggleDisplay($('more-controls'))" style="float: right;">Options &raquo;</a>
+		
+	</div>
+	
+	
+	
+	<div id="more-controls" style="display:none;">
+		<a href="javascript:void(0);" id="btnGenerate">Regenerate</a> |
+		<a href="javascript:void(0);" id="optShowtags">&lt;p&gt; tags</a> |
+		<a href="javascript:void(0);" id="optSelect">Select all</a>
+	</div>
+
+</div>
+</body>
+</html>
