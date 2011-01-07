@@ -2,18 +2,18 @@
 <rss version='2.0' xmlns:admin='http://webns.net/mvcb/' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:sy='http://purl.org/rss/1.0/modules/syndication/'>
 <channel>
 <title>Rico Sta Cruz.com</title>
-<link>http://rstacruz.github.com</link>
+<link>http://ricostacruz.com</link>
 <description></description>
 <dc:language>en</dc:language>
 <dc:rights>Copyright 2010</dc:rights>
-<pubDate>Thu,  6 Jan 2011 14:33:49 +0800</pubDate>
+<pubDate>Fri,  7 Jan 2011 10:45:48 +0800</pubDate>
 <item>
 <title>HAML and IE compatibility</title>
-<link>http://rstacruz.github.com/2010/haml_and_ie_compatibility.html</link>
+<link>http://ricostacruz.com/2010/haml_and_ie_compatibility.html</link>
 <description>
 <![CDATA[<p class="brief c3">I love <span class="caps">HAML</span>, and I love the insanely-elegant <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish IE conditional comments trick</a> (not hack!). But can we use them together? For those that tried, I&#8217;m sure you know by now that trying to shoehorn the whole snippet as a bunch of <span class="caps">HAML</span> comments is just gross, and impossible.</p>
 <section class="flush">
-<p><img src="http://rstacruz.github.comimages/cc_ie_html.png" alt="" /></p>
+<p><img src="http://ricostacruz.comimages/cc_ie_html.png" alt="" /></p>
 <div class="caption c1">
 <p><strong>Figure 1</strong>.<br />
 IE conditional comments allows you to target IE versions easily without any hacks. More info in <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Paul Irish&#8217;s post</a></p>
