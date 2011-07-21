@@ -6,7 +6,19 @@
 <description></description>
 <dc:language>en</dc:language>
 <dc:rights>Copyright 2010</dc:rights>
-<pubDate>Sun, 13 Feb 2011 12:44:19 +0800</pubDate>
+<pubDate>Thu, 21 Jul 2011 16:02:14 +0800</pubDate>
+<item>
+<title>Killing orphans</title>
+<link>http://ricostacruz.com/2011/unorphan.html</link>
+<description>
+<![CDATA[<div class='c1'>
+<p><strong>Paragraphs with single words</strong> in the end are ugly. Live by this rule in the web and print. These words are called <em><a href="http://en.wikipedia.org/wiki/Widows_and_orphans">orphans</a></em>.</p>
+<p>I&#8217;ve just put together a one-off JQuery plugin to fix the problem of text orphans. Check out <a href="http://github.com/rstacruz/jquery.unorphan">jQuery Unorphan</a> for a quick, elegant solution.</p>
+<p class="brief"><a href="http://github.com/rstacruz/jquery.unorphan">Unorphan for jQuery &rarr;</a></p>
+</div>]]>
+</description>
+<pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate>
+</item>
 <item>
 <title>HAML and IE compatibility</title>
 <link>http://ricostacruz.com/2010/haml_and_ie_compatibility.html</link>
