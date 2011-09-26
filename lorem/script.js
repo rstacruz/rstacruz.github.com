@@ -125,6 +125,7 @@ function TextGenerator()
 		if (f.length == 0) return '';
 		
 		if ((f.substr(f.length-1) != '?') &&
+		    (f.substr(f.length-1) != '!') &&
 		    (f.substr(f.length-1) != '.'))
 			{ f = f + '.'; }
 		return f;
@@ -767,7 +768,7 @@ function TagalogGenerator()
 		adjModPh: function() {
 			var ran = erandom(0,4);
 			if (ran <= 3)
-				return 'pinaka';
+				return 'pinaka-';
 			else return '';
 		}
 	};
@@ -801,6 +802,78 @@ function TagalogGenerator()
 	];
 }
 
+function ChorvaGenerator()
+{	
+
+	this.superclass = TagalogGenerator;
+	this.superclass();
+
+	this.words = {		
+		noun: new Words ([
+			'pangalan', 'kaibigan', 'liwanag',  'dilim', 'habagat', 'tinik',
+      'chuvaness', 'eklat', 'eklavoo', 'chuchu', 'chuchubels', 'bubukesh',
+      'chenelyn', 'mga beki', 'mitchels', 'fez', 'itech', 'anik', 'anik-anik'
+			]),
+			
+		verbPast: new Words ([
+			'pinili', 'ginawa', 'binago', 'dinamdam', 'itinaksil', 'binawi',
+			'hinatol', 'nilunod', 'tinangkilik', 'sinama', 'isinulat',
+			'itinakda', 'sinakay', 'ipinaalam', 'pinanaw', 'ipinalabas',
+      'chinaka', 'na-Julie Yap Daza', 'chinuk-chak-cheness',
+      'nag-jembot jembot', 'inokray', 'lumafang',
+			]),
+			
+		entity: new Words ([
+			// living
+			'makhata', 'ibon', 'matanda', 'reyna', 'kasama', 'kapatid',
+			'tauhan', 'bunso', 'panganay', 'Shamcey Supsup', 'jowa',
+      'kyota', 'nyorts', 'keri', 'mudra',
+			
+			// non-living
+			'bato', 'lupa', 'hangin', 'pamahalaan',
+			
+			// abstract nouns
+			'pangamba', 'himala', 'tagumpay'
+			]),
+			
+		adjective: new Words ([
+      'chakang', 'chipanggang', 'thundercats na', 'pagoda cold wave lotion na',
+      'shubos na', 'tarush na', 'kyoho na'
+			]),
+			
+		presetPreposPhrase: new Words ([
+			'ayon', 'nako', 'hay nako', "aba", 'at',
+      'in fairness', 'at in fairview', 'o ano'
+			]),
+			
+    exclamations: new Words ([
+      'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!'
+      ]),
+
+		possessive: new Words ([
+			'aking', 'iyong', 'ating', 'kanyang'
+			])
+	};
+
+
+  var oldSentences = this.sentences[0];
+  this.sentences = [ function() {
+      if (erandom(0,3)==0)
+        { return get('exclamations'); }
+      else
+        { return oldSentences(); }
+  } ];
+
+  this.oldGetSentence = this.getSentence;
+	this.getSentence = function(pOptions)
+	{
+		var s = this.oldGetSentence(pOptions);
+    console.log(s);
+    s = s.substr(0, s.length - 1);
+    s += (erandom(0,1) == 0) ? '!' : '.';
+    return s;
+	}
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -819,12 +892,15 @@ function btnGenerate_onClick()
 	var f, gen;
 	switch ($('optGen').value)
 	{
-	  case 'latin':		gen = new LatinGenerator();    break;
+	  case 'latin':		  gen = new LatinGenerator();    break;
 	  case 'tagalog':   gen = new TagalogGenerator();  break;
 	  case 'jabberwock':gen = new JabberwockGenerator();  break;
-	  default:   		gen = new EnglishGenerator();  break;
+	  case 'chorva':    gen = new ChorvaGenerator();  break;
+	  default:   		    gen = new EnglishGenerator();  break;
 	}
 	
+  window.location.hash = '#' + $('optGen').value;
+
 	f = gen.generate({
 		paraCount:  $('optParaCount').value,
 		len: 		$('optLen').value
@@ -848,6 +924,11 @@ window.onload = function()
 		$('textOut').focus();
 	}
 	
+  if (window.location.hash) {
+    $('optGen').value = window.location.hash.substr(1);
+    btnGenerate_onClick();
+  }
+
 	$('optShowtags').onclick = function()
     {
 		// If it's already got <p> then forget it
