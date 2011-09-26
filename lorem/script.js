@@ -837,8 +837,8 @@ function ChorvaGenerator()
 			]),
 			
 		adjective: new Words ([
-      'chakang', 'chipanggang', 'thundercats na', 'pagoda cold wave lotion na',
-      'shubos na', 'tarush na', 'kyoho na'
+      'chaka', 'chipangga', 'thundercats', 'pagoda cold wave lotion',
+      'shubos', 'tarush', 'kyoho'
 			]),
 			
 		presetPreposPhrase: new Words ([
