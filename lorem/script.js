@@ -827,7 +827,7 @@ function ChorvaGenerator()
 			// living
 			'makhata', 'ibon', 'matanda', 'reyna', 'kasama', 'kapatid',
 			'tauhan', 'bunso', 'panganay', 'Shamcey Supsup', 'jowa',
-      'kyota', 'nyorts', 'keri', 'mudra',
+      'kyota', 'nyorts', 'keri', 'mudra', 'lulubelles', 'lokarets',
 			
 			// non-living
 			'bato', 'lupa', 'hangin', 'pamahalaan',
@@ -847,7 +847,8 @@ function ChorvaGenerator()
 			]),
 			
     exclamations: new Words ([
-      'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!', 'Chos!'
+      'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!', 'Chos!',
+      'Bonggang-bongga!'
       ]),
 
 		possessive: new Words ([
