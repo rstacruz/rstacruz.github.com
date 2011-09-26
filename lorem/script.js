@@ -812,7 +812,8 @@ function ChorvaGenerator()
 		noun: new Words ([
 			'pangalan', 'kaibigan', 'liwanag',  'dilim', 'habagat', 'tinik',
       'chuvaness', 'eklat', 'eklavoo', 'chuchu', 'chuchubels', 'bubukesh',
-      'chenelyn', 'mga beki', 'mitchels', 'fez', 'itech', 'anik', 'anik-anik'
+      'chenelyn', 'beki', 'mitchels', 'fez', 'itech', 'anik', 'anik-anik',
+      'vaklush'
 			]),
 			
 		verbPast: new Words ([
@@ -820,7 +821,8 @@ function ChorvaGenerator()
 			'hinatol', 'nilunod', 'tinangkilik', 'sinama', 'isinulat',
 			'itinakda', 'sinakay', 'ipinaalam', 'pinanaw', 'ipinalabas',
       'chinaka', 'na-Julie Yap Daza', 'chinuk-chak-cheness',
-      'nag-jembot-jembot', 'inokray', 'lumafang',
+      'nag-jembot-jembot', 'inokray', 'lumafang', 'umapear',
+      'nagpa-feel'
 			]),
 			
 		entity: new Words ([
@@ -842,13 +844,13 @@ function ChorvaGenerator()
 			]),
 			
 		presetPreposPhrase: new Words ([
-			'ayon', 'nako', 'hay nako', "aba", 'at',
-      'in fairness', 'at in fairview', 'o ano'
+			'ayon', 'nako', 'hay nako', 'aba',
+      'in fairness', 'at in fairview', 'o ano', 'ditey sa balur'
 			]),
 			
     exclamations: new Words ([
       'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!', 'Chos!',
-      'Bonggang-bongga!'
+      'Bonggang-bongga!', 'Awaaaard!', 'Win na win!'
       ]),
 
 		possessive: new Words ([
