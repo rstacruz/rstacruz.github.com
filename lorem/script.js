@@ -820,7 +820,7 @@ function ChorvaGenerator()
 			'hinatol', 'nilunod', 'tinangkilik', 'sinama', 'isinulat',
 			'itinakda', 'sinakay', 'ipinaalam', 'pinanaw', 'ipinalabas',
       'chinaka', 'na-Julie Yap Daza', 'chinuk-chak-cheness',
-      'nag-jembot jembot', 'inokray', 'lumafang',
+      'nag-jembot-jembot', 'inokray', 'lumafang',
 			]),
 			
 		entity: new Words ([
@@ -847,7 +847,7 @@ function ChorvaGenerator()
 			]),
 			
     exclamations: new Words ([
-      'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!'
+      'Charing!', 'O anong sey mo?', 'Chaka!', 'Ano ba itech?!', 'Chos!'
       ]),
 
 		possessive: new Words ([
@@ -858,7 +858,7 @@ function ChorvaGenerator()
 
   var oldSentences = this.sentences[0];
   this.sentences = [ function() {
-      if (erandom(0,3)==0)
+      if (erandom(0,2)==0)
         { return get('exclamations'); }
       else
         { return oldSentences(); }
