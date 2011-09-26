@@ -869,9 +869,13 @@ function ChorvaGenerator()
 	this.getSentence = function(pOptions)
 	{
 		var s = this.oldGetSentence(pOptions);
-    console.log(s);
-    s = s.substr(0, s.length - 1);
-    s += (erandom(0,1) == 0) ? '!' : '.';
+    var p = s.substr(s.length -1);
+
+    if (p == '.') {
+      s = s.substr(0, s.length - 1);
+      s += (erandom(0,1) == 0) ? '!' : '.';
+    }
+
     return s;
 	}
 }
