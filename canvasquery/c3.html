@@ -6,18 +6,11 @@ by jQuery.</p>             </td>             <td class="code">               <di
 
 <p>The constructor is <code>C3</code> which creates a C3 object.</p>
 
+<pre><code>C3("#canvas")
+</code></pre>
+
 <p>You can pass a selector <em>(1)</em>, Canvas object <em>(2)</em>, a Canvas Context
 object <em>(3)</em>, or a jQuery object <em>(4)</em>.</p>
-
-<pre><code>C3("#canvas") /* 1 */
-
-canvas = document.createElement('canvas');
-C3(canvas); /* 2 */
-
-C3(canvas.getContext('2d')); /* 3 */
-
-C3($('canvas')) /* 4 */
-</code></pre>
 
 <p>From this, you may chain calls.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">function</span> <span class="nx">C3</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nx">C3</span><span class="p">.</span><span class="nb">Object</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
