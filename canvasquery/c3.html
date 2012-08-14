@@ -287,6 +287,21 @@ web worker.</p>
   .compileEnd()
 </code></pre>
 
+<p>The result is a flat, anonymous function. It will have no closure
+dependencies, so it's perfectly useable as a string, as well.</p>
+
+<pre><code>console.log(fn.toString());
+
+/* Result:
+   function(cx) {
+     cx.fillStyle = 'red';
+     cx.moveTo(0,0);
+     cx.lineTo(1,10);
+     cx.fill();
+   }
+*/
+</code></pre>
+
 <p>The resulting function takes a Canvas context.</p>
 
 <pre><code>fn(canvas.getContext('2d'));

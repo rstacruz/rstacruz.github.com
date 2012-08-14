@@ -183,4 +183,19 @@ body .bp { color: #954121 }                     /* Name.Builtin.Pseudo */
 body .vc { color: #19469D }                     /* Name.Variable.Class */
 body .vg { color: #19469D }                     /* Name.Variable.Global */
 body .vi { color: #19469D }                     /* Name.Variable.Instance */
-body .il { color: #666666 }                     /* Literal.Number.Integer.Long */td.docs, th.docs { padding-top: 30px; padding-bottom: 80px; border-bottom: solid 1px #ddd; }
+body .il { color: #666666 }                     /* Literal.Number.Integer.Long */
+    td.code, td.docs {
+      padding-top: 50px; }
+
+    td.docs, td.code {
+      padding-bottom: 50px; }
+
+    h1, h2, h3, h4 {
+      border-top: solid 1px #ccc;
+      padding-top: 50px;
+      margin-top: -50px;
+      margin-right: -30px;
+      margin-left: -80px;
+      padding-left: 80px;
+    }
+  
