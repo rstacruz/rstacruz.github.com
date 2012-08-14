@@ -188,7 +188,7 @@ body .il { color: #666666 }                     /* Literal.Number.Integer.Long *
       padding-top: 50px; }
 
     td.docs, td.code {
-      padding-bottom: 50px; }
+      padding-bottom: 20px; }
 
     h1, h2, h3, h4 {
       border-top: solid 1px #ccc;
