@@ -1,0 +1,400 @@
+<!DOCTYPE html>  <html> <head>   <title>C3.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="style.css" /> </head> <body>   <div id="area">     <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-0">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-0">&#182;</a>               </div>                            </td>             <td class="code">               <div class="highlight"><pre><span class="cm">/*! C3.js - Chainable Canvas Conduit */</span></pre></div>             </td>           </tr>                               <tr id="C3-js">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#C3-js">&#182;</a>               </div>               <h1>C3.js</h1>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p>C3 is a very lightweight wrapper for the Canvas object.  It allows you to
+chain canvas calls, among many other niceties. Its API is heavily-inspired
+by jQuery.</p>
+
+<p>It has no hard dependencies.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="Constructing">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Constructing">&#182;</a>               </div>               <h2>Constructing</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>The constructor is <code>C3</code> which creates a C3 object.</p>
+
+<pre><code>C3("#canvas")
+</code></pre>
+
+<p>You can pass a selector <em>(1)</em>, Canvas object <em>(2)</em>, a Canvas Context
+object <em>(3)</em>, or a jQuery object <em>(4)</em>.</p>
+
+<p>From this, you may chain calls.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">function</span> <span class="nx">C3</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">C3</span><span class="p">.</span><span class="nb">Object</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">C3</span><span class="p">.</span><span class="nb">Object</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">canvas</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">canvas</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 1 */</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">canvas</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 2 */</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">save</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 3 */</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">canvas</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">canvas</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">getContext</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 4 */</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">cx</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_style</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">C3</span><span class="p">.</span><span class="nx">Styler</span><span class="p">();</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="Canvas-Support-checking">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Canvas-Support-checking">&#182;</a>               </div>               <h3>Canvas Support checking</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>You may check for a browser's Canvas support via <code>C3.support.canvas</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">support</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">canvas</span><span class="o">:</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;canvas&#39;</span><span class="p">).</span><span class="nx">getContext</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="Extending-C3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Extending-C3">&#182;</a>               </div>               <h3>Extending C3</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>You can extend C3 by editing <code>C3.fn</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="cm">/* Example:</span>
+
+<span class="cm">     C3.fn.invert = function() {</span>
+<span class="cm">       ...</span>
+<span class="cm">     };</span>
+
+<span class="cm">     C3(&quot;canvas&quot;).invert();</span>
+<span class="cm">   */</span>
+
+  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span> <span class="o">=</span> <span class="nx">C3</span><span class="p">.</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span></pre></div>             </td>           </tr>                               <tr id="Canvas-method-chaining">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Canvas-method-chaining">&#182;</a>               </div>               <h2>Canvas method chaining</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <p>You can use Canvas functions as chainable calls, so you can chain simple
+canvas calls.</p>
+
+<pre><code>C3("#canvas")
+  .beginPath()
+  .moveTo(0, 0)
+  .lineTo(10, 10)
+  .closePath()
+  .fill()
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;save&quot;</span><span class="p">,</span> <span class="s2">&quot;restore&quot;</span><span class="p">,</span> <span class="s2">&quot;scale&quot;</span><span class="p">,</span> <span class="s2">&quot;rotate&quot;</span><span class="p">,</span> <span class="s2">&quot;translate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="s2">&quot;setTransform&quot;</span><span class="p">,</span> <span class="s2">&quot;clearRect&quot;</span><span class="p">,</span> <span class="s2">&quot;fillRect&quot;</span><span class="p">,</span> <span class="s2">&quot;beginPath&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;closePath&quot;</span><span class="p">,</span> <span class="s2">&quot;moveTo&quot;</span><span class="p">,</span> <span class="s2">&quot;lineTo&quot;</span><span class="p">,</span> <span class="s2">&quot;quadraticCurveTo&quot;</span><span class="p">,</span> <span class="s2">&quot;bezierCurveTo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;arcTo&quot;</span><span class="p">,</span> <span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="s2">&quot;arc&quot;</span><span class="p">,</span> <span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="s2">&quot;stroke&quot;</span><span class="p">,</span> <span class="s2">&quot;clip&quot;</span><span class="p">,</span> <span class="s2">&quot;setAlpha&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;setCompositeOperation&quot;</span><span class="p">,</span> <span class="s2">&quot;setLineWidth&quot;</span><span class="p">,</span> <span class="s2">&quot;setLineCap&quot;</span><span class="p">,</span> <span class="s2">&quot;setLineJoin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;setMiterLimit&quot;</span><span class="p">,</span> <span class="s2">&quot;clearShadow&quot;</span><span class="p">,</span> <span class="s2">&quot;fillText&quot;</span><span class="p">,</span> <span class="s2">&quot;strokeText&quot;</span><span class="p">,</span> <span class="s2">&quot;setStrokeColor&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;setFillColor&quot;</span><span class="p">,</span> <span class="s2">&quot;strokeRect&quot;</span><span class="p">,</span> <span class="s2">&quot;drawImage&quot;</span><span class="p">,</span> <span class="s2">&quot;drawImageFromRect&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;setShadow&quot;</span><span class="p">,</span> <span class="s2">&quot;putImageData&quot;</span><span class="p">];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">methods</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">method</span> <span class="o">=</span> <span class="nx">methods</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">method</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">[</span><span class="nx">method</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">})(</span><span class="nx">method</span><span class="p">);</span>
+  <span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="Getter-methods">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Getter-methods">&#182;</a>               </div>               <h2>Getter methods</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-12">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-12">&#182;</a>               </div>               <p>Some methods return results immediately. They are not chainable.</p>
+
+<pre><code>C3("#canvas")
+  .getImageData(0, 0, 40, 40);
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">getters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;getImageData&quot;</span><span class="p">,</span> <span class="s2">&quot;createLinearGradient&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;createRadialGradient&quot;</span><span class="p">,</span> <span class="s2">&quot;isPointInPath&quot;</span><span class="p">,</span> <span class="s2">&quot;measureText&quot;</span><span class="p">,</span> <span class="s2">&quot;createPattern&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;createImageData&quot;</span><span class="p">];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">getters</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">getter</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">[</span><span class="nx">getter</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">).</span><span class="nx">result</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">})(</span><span class="nx">getters</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="Canvas-properties">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Canvas-properties">&#182;</a>               </div>               <h2>Canvas properties</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-14">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-14">&#182;</a>               </div>               <p>Some attributes can be accessed through these getter/setters.</p>
+
+<pre><code>C3("#canvas")
+  .height(100)
+  .width(200)
+
+C3("#canvas").width() //=&gt; 200
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">canvasProperties</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">canvasProperties</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">prop</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">val</span><span class="p">;</span>
+          <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">canvas</span><span class="p">[</span><span class="nx">prop</span><span class="p">];</span>
+        <span class="p">}</span>
+      <span class="p">};</span>
+    <span class="p">})(</span><span class="nx">canvasProperties</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="Context-properties">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Context-properties">&#182;</a>               </div>               <h2>Context properties</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-16">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-16">&#182;</a>               </div>               <p>Some attributes can be accessed through these getter/setters.</p>
+
+<pre><code>C3("#canvas")
+  .font("10pt Arial")
+  .lineWidth(20)
+
+C3("#canvas").lineWidth(); //=&gt; 20
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">cxProperties</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;globalAlpha&quot;</span><span class="p">,</span> <span class="s2">&quot;strokeStyle&quot;</span><span class="p">,</span> <span class="s2">&quot;font&quot;</span><span class="p">,</span> <span class="s2">&quot;lineJoin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;textAlign&quot;</span><span class="p">,</span> <span class="s2">&quot;shadowBlur&quot;</span><span class="p">,</span> <span class="s2">&quot;lineCap&quot;</span><span class="p">,</span> <span class="s2">&quot;fillStyle&quot;</span><span class="p">,</span> <span class="s2">&quot;textBaseline&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shadowOffsetY&quot;</span><span class="p">,</span> <span class="s2">&quot;lineWidth&quot;</span><span class="p">,</span> <span class="s2">&quot;miterLimit&quot;</span><span class="p">,</span> <span class="s2">&quot;shadowOffsetX&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;globalCompositeOperation&quot;</span><span class="p">,</span> <span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="s2">&quot;shadowColor&quot;</span><span class="p">];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cxProperties</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">prop</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="nx">prop</span><span class="p">,</span> <span class="nx">val</span><span class="p">);</span> <span class="p">};</span>
+    <span class="p">})(</span><span class="nx">cxProperties</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="fn-attr">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-attr">&#182;</a>               </div>               <h3>fn.attr()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-18">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-18">&#182;</a>               </div>               <p>Basic setter/getter for Context properties.</p>
+
+<pre><code> $("#canvas").attr('globalAlpha', 0.5);
+ $("#canvas").attr('globalAlpha');
+</code></pre>
+
+<p>You can also set multiple attributes at once:</p>
+
+<pre><code> $("#canvas").attr({
+   globalAlpha: 0.5,
+   globalCompositeOperation: 'source-over'
+ })
+</code></pre>
+
+<p>You don't often need to use this, as there are aliases available for most
+attributes already. For instance, those <code>.attr('globalAlpha')</code> calls above
+are the same as:</p>
+
+<pre><code> $("#canvas").globalAlpha(0.5);
+ $("#canvas").globalAlpha();
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">attr</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">attr</span> <span class="k">in</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">key</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">attr</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">setAttr</span><span class="p">(</span><span class="nx">attr</span><span class="p">,</span> <span class="nx">key</span><span class="p">[</span><span class="nx">attr</span><span class="p">]);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">getAttr</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setAttr</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-19">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-19">&#182;</a>               </div>               <p>Internally, all attribute get calls pass through here.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">getAttr</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-20">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-20">&#182;</a>               </div>               <p>Internally, all attribute set calls pass through here.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">setAttr</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="fn-run">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-run">&#182;</a>               </div>               <h3>fn.run()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-22">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-22">&#182;</a>               </div>               <p>Performs a function call <code>method</code> to the Canvas Context, passing the
+arguments array <code>args</code>.</p>
+
+<pre><code> C3("#canvas").run("stroke")
+
+ // Same as canvas.getContext("2d").stroke();
+</code></pre>
+
+<p>You can pass arguments as an array.</p>
+
+<pre><code>C3("#canvas").run("moveTo", [10, 40]);
+
+// Same as canvas.getContext("2d").moveTo(10, 40);
+</code></pre>
+
+<p>You can get the result via <code>.result</code>.</p>
+
+<pre><code> C3("#canvas").run("getImageData", [0,1,2,3]).result;
+</code></pre>
+
+<p>You don't often need to use this, as there are aliases available for most
+attributes already. For instance, the <code>.run("moveTo", [10, 40])</code> call above
+is the same as:</p>
+
+<pre><code> $("#canvas").moveTo(10, 40);
+</code></pre>
+
+<p>Internally, all canvas context calls pass through here.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">[</span><span class="nx">method</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="How-to-draw">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#How-to-draw">&#182;</a>               </div>               <h2>How to draw</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-24">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-24">&#182;</a>               </div>               <p>You will usually need to use <code>.style()</code>, some drawing functions, and
+<code>.paint()</code> in that order:</p>
+
+<p>The <code>.style()</code> sets the ink styles. The drawing functions (like
+ <code>.rect()</code>, <code>.line()</code>, ...) will draw paths, while the <code>.paint()</code> call
+ will paint by filling/stroking the styles set earlier.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="cm">/* Example:</span>
+
+<span class="cm">     C3(&quot;#canvas&quot;)</span>
+<span class="cm">       .style({ fillColor: &#39;black&#39; })</span>
+<span class="cm">       .rect(x,y,w,h)</span>
+<span class="cm">       .paint()</span>
+
+<span class="cm">   */</span></pre></div>             </td>           </tr>                               <tr id="Styles">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Styles">&#182;</a>               </div>               <h2>Styles</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-26">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-26">&#182;</a>               </div>               <p>Provisions for styling are provided via <code>.paint()</code>, <code>.style()</code> and
+<code>.clearStyle()</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="fn-style">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-style">&#182;</a>               </div>               <h3>fn.style()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-28">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-28">&#182;</a>               </div>               <p>Sets style. Be sure to invoke <code>paint()</code> after drawing.</p>
+
+<pre><code>C3("#canvas")
+  .style({ fillStyle: 'red' })
+  .rect(...)
+  .paint()
+</code></pre>
+
+<p>When invoked without arguments, returns the styles previously set by
+<code>.style()</code>.</p>
+
+<pre><code>$("#canvas").style();
+//=&gt; {fillStyle:'red'}
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">style</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">styles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">styles</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">_style</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">styles</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_style</span><span class="p">.</span><span class="nx">styles</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="fn-clearStyle">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-clearStyle">&#182;</a>               </div>               <h3>fn.clearStyle()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-30">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-30">&#182;</a>               </div>               <p>Resets the styles set using <code>.style()</code>.</p>
+
+<pre><code>C3("#canvas")
+  .style({ strokeStyle: 'blue', fillStyle: 'red' })
+  .line([[0,10], [100,10], [200,200]])
+  .paint()
+
+  .clearStyle()
+  .style({ strokeStyle: 'green' })
+  .line([[0,10], [100,10]])
+  .paint()
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">clearStyle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_style</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="fn-paint">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-paint">&#182;</a>               </div>               <h3>fn.paint()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-32">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-32">&#182;</a>               </div>               <p>Applies the styles by performing <code>fill()</code> and <code>stroke()</code> as needed.</p>
+
+<pre><code>C3("#canvas")
+  .style({ fillStyle: 'red' })
+  .rect(0, 0, 20, 20)
+  .paint()
+</code></pre>
+
+<p>This example makes <code>paint()</code> invoke <code>fill()</code>, which applies the styles.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">paint</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_style</span><span class="p">.</span><span class="nx">paint</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="Drawing-functions">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Drawing-functions">&#182;</a>               </div>               <h2>Drawing functions</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-34">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-34">&#182;</a>               </div>               <p>Aside from the basic canvas drawing functions, C3 provides these helpful
+helpers.</p>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="fn-clear">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-clear">&#182;</a>               </div>               <h3>fn.clear()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-36">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-36">&#182;</a>               </div>               <p>Clears the canvas area on given <code>x</code>, <code>y</code>, <code>w</code>, <code>h</code> rectangle. When no
+arguments are given, clears the entire canvas.</p>
+
+<pre><code>C3("#canvas").clear()
+C3("#canvas").clear(0, 0, 30, 30)
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">clear</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">(),</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">cx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">h</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="fn-line">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-line">&#182;</a>               </div>               <h3>fn.line()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-38">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-38">&#182;</a>               </div>               <p>Draws straight lines.</p>
+
+<pre><code>C3("#canvas")
+  .line([[0,0], [10,10]])
+  .line([[0,0], [10,10], [20,20], ...])
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">line</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="k">in</span> <span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">index</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">xy</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">method</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="s1">&#39;moveTo&#39;</span> <span class="o">:</span> <span class="s1">&#39;lineTo&#39;</span><span class="p">);</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">xy</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">closePath</span><span class="p">();</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="Command-compilation">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Command-compilation">&#182;</a>               </div>               <h2>Command compilation</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-40">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-40">&#182;</a>               </div>               <p>You can compile Canvas calls into an anonymous function using <code>.compile()</code>
+and <code>.compileEnd()</code>. Useful for 'caching' things, or maybe using c3 in a
+web worker.</p>
+
+<pre><code>var fn = C3("#canvas")
+  .compile()
+  .style({ fillStyle: 'red' })
+  .line([[0,0], [1,10])
+  .paint()
+  .compileEnd()
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-41">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-41">&#182;</a>               </div>               <p>The resulting function takes a Canvas element.</p>
+
+<pre><code>fn(canvas);
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-42">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-42">&#182;</a>               </div>               <p>The result is a flat, anonymous function. It will have no closure
+dependencies, so it's perfectly useable as a string, as well.</p>
+
+<pre><code>console.log(fn.toString());
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="cm">/* Result:</span>
+<span class="cm">     function(cx) {</span>
+<span class="cm">       cx.fillStyle = &#39;red&#39;;</span>
+<span class="cm">       cx.moveTo(0,0);</span>
+<span class="cm">       cx.lineTo(1,10);</span>
+<span class="cm">       cx.fill();</span>
+<span class="cm">     }</span>
+<span class="cm">  */</span></pre></div>             </td>           </tr>                               <tr id="fn-compile">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#fn-compile">&#182;</a>               </div>               <h3>fn.compile()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-44">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-44">&#182;</a>               </div>               <p>Begins compilation.</p>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">compile</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">commands</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">C3</span><span class="p">.</span><span class="nx">Compiler</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">C3</span><span class="p">.</span><span class="nx">Compiler</span> <span class="o">=</span> <span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="section-45">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-45">&#182;</a>               </div>               <p>Temporary <code>getAttr()</code> replacement: does nothing.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">getAttr</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">undefined</span><span class="p">;</span>
+    <span class="p">},</span></pre></div>             </td>           </tr>                               <tr id="section-46">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-46">&#182;</a>               </div>               <p>Temporary <code>setAttr()</code> replacement to cache the attribute set commands.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">setAttr</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attr</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;cx.&quot;</span> <span class="o">+</span> <span class="nx">attr</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;;&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">},</span></pre></div>             </td>           </tr>                               <tr id="section-47">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-47">&#182;</a>               </div>               <p>Temporary <code>run()</code> replacement to cache the method calls.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">run</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">function</span> <span class="nx">toArgs</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+        <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+      <span class="p">};</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;cx.&quot;</span> <span class="o">+</span> <span class="nx">method</span> <span class="o">+</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nx">toArgs</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;);&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">},</span></pre></div>             </td>           </tr>                               <tr id="section-48">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-48">&#182;</a>               </div>               <p>Terminate compilation by returning commands to defaults, and baking the
+commands into an anonymous function.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">compileEnd</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">commands</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">commands</span><span class="p">;</span>
+
+      <span class="k">delete</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">commands</span><span class="p">);</span>
+      <span class="k">delete</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttr</span><span class="p">);</span>
+      <span class="k">delete</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">setAttr</span><span class="p">);</span>
+      <span class="k">delete</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">run</span><span class="p">);</span>
+      <span class="k">delete</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">compileEnd</span><span class="p">);</span>
+
+      <span class="k">return</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">&quot;canvas&quot;</span><span class="p">,</span> <span class="s2">&quot;var cx = canvas.getContext(&#39;2d&#39;);\n&quot;</span> <span class="o">+</span> <span class="nx">commands</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;\n&quot;</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-49">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-49">&#182;</a>               </div>               <hr />             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="Styler">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Styler">&#182;</a>               </div>               <h2>Styler</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-51">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-51">&#182;</a>               </div>               <p>I am a helper, I am not part of the public API. The <code>.style()</code>,
+<code>.clearStyle()</code>, and <code>.paint()</code> functions delegate to me.</p>
+
+<p>My responsibility is to keep track of styles set on the canvas, reset them
+if necessary, and paint (fill/stroke) them when needed.</p>
+
+<pre><code>s = new C3.Styler;
+s.add({ ... });
+s.applyTo(context);
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">C3</span><span class="p">.</span><span class="nx">Styler</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nx">Styler</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">styles</span> <span class="o">=</span> <span class="p">{};</span></pre></div>             </td>           </tr>                               <tr id="section-52">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-52">&#182;</a>               </div>               <p>Original styles as a hash. Keys are the styles, values are nothing.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">originalStyles</span> <span class="o">=</span> <span class="p">{};</span></pre></div>             </td>           </tr>                               <tr id="add">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#add">&#182;</a>               </div>               <h3>add()</h3>
+
+<p>Adds some styles <code>styles</code> to canvas context <code>cx</code>.
+Used by <code>c3.fn.style()</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">C3</span><span class="p">,</span> <span class="nx">styles</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">styles</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">styles</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span></pre></div>             </td>           </tr>                               <tr id="section-54">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-54">&#182;</a>               </div>               <p>Don't apply non-'official' styles</p>             </td>             <td class="code">               <div class="highlight"><pre>          <span class="k">if</span> <span class="p">(</span><span class="nx">cxProperties</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">continue</span><span class="p">;</span>
+          <span class="p">}</span>
+
+          <span class="k">this</span><span class="p">.</span><span class="nx">styles</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">styles</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span></pre></div>             </td>           </tr>                               <tr id="section-55">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-55">&#182;</a>               </div>               <p>Store the old canvas context.</p>             </td>             <td class="code">               <div class="highlight"><pre>          <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="k">this</span><span class="p">.</span><span class="nx">originalStyles</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">originalStyles</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+          <span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-56">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-56">&#182;</a>               </div>               <p>Commit to canvas context.</p>             </td>             <td class="code">               <div class="highlight"><pre>          <span class="nx">C3</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">styles</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="reset">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#reset">&#182;</a>               </div>               <h3>reset()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-58">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-58">&#182;</a>               </div>               <p>Restore original styles as stored when <code>add()</code> was used.
+Used by <code>c3.fn.clearStyle()</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">reset</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">C3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">originalStyles</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">originalStyles</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+          <span class="nx">C3</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">styles</span> <span class="o">=</span> <span class="p">{};</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">originalStyles</span> <span class="o">=</span> <span class="p">{};</span>
+
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="paint">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#paint">&#182;</a>               </div>               <h3>paint()</h3>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-60">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-60">&#182;</a>               </div>               <p>Applies styles to canvas context <code>cx</code> via <code>stroke()</code> or <code>fill()</code>.</p>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">paint</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">C3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">hasStroke</span><span class="p">())</span> <span class="p">{</span>
+        <span class="nx">C3</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">hasFill</span><span class="p">())</span> <span class="p">{</span>
+        <span class="nx">C3</span><span class="p">.</span><span class="nx">fill</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="hasStroke">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#hasStroke">&#182;</a>               </div>               <h3>hasStroke()</h3>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasStroke</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">(</span><span class="o">!!</span><span class="k">this</span><span class="p">.</span><span class="nx">styles</span><span class="p">.</span><span class="nx">lineStyle</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="o">!!</span><span class="k">this</span><span class="p">.</span><span class="nx">styles</span><span class="p">.</span><span class="nx">lineWidth</span><span class="p">);</span>
+    <span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="hasFill">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#hasFill">&#182;</a>               </div>               <h3>hasFill()</h3>             </td>             <td class="code">               <div class="highlight"><pre>    <span class="nx">Styler</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasFill</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">!!</span><span class="k">this</span><span class="p">.</span><span class="nx">styles</span><span class="p">.</span><span class="nx">fillStyle</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">Styler</span><span class="p">;</span>
+
+  <span class="p">})();</span>
+
+  <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">;</span> <span class="p">}());</span></pre></div>             </td>           </tr>                               <tr id="Export">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#Export">&#182;</a>               </div>               <h2>Export</h2>             </td>             <td class="code">               <div class="highlight"><pre>  <span class="nx">exports</span><span class="p">.</span><span class="nx">C3</span> <span class="o">=</span> <span class="nx">C3</span><span class="p">;</span>
+<span class="p">})();</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div>    <div id="sidebar">     <div class='header search'>       <input type='text' name='search' id='search-box' placeholder='Search...' />     </div>      <div class='header tabs'>       <button class='active'>Pages</button>       <button>Files</button>     </div>      <div class='list files hidden'>     </div>      <div class='list pages'>       <ul>                                          <li class='page'>             <a href='index.html'>C3.js</a>             <ul>                                                                  <li class='heading level-2'>                   <a href="index.html#Constructing">                     Constructing                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#Canvas-Support-checking">                     Canvas Support checking                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#Extending-C3">                     Extending C3                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Canvas-method-chaining">                     Canvas method chaining                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Getter-methods">                     Getter methods                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Canvas-properties">                     Canvas properties                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Context-properties">                     Context properties                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-attr">                     fn.attr()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-run">                     fn.run()                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#How-to-draw">                     How to draw                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Styles">                     Styles                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-style">                     fn.style()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-clearStyle">                     fn.clearStyle()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-paint">                     fn.paint()                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Drawing-functions">                     Drawing functions                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-clear">                     fn.clear()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-line">                     fn.line()                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Command-compilation">                     Command compilation                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#fn-compile">                     fn.compile()                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Styler">                     Styler                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#add">                     add()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#reset">                     reset()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#paint">                     paint()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#hasStroke">                     hasStroke()                   </a>                 </li>                                                                  <li class='heading level-3'>                   <a href="index.html#hasFill">                     hasFill()                   </a>                 </li>                                                                  <li class='heading level-2'>                   <a href="index.html#Export">                     Export                   </a>                 </li>                            </ul>           </li>                </ul>     </div>    </div>    <script src='http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js'></script> </body> </html> 
