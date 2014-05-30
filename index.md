@@ -15,7 +15,7 @@ speak in conferences.
 __[You should follow me on Twitter.][twitter]__ Get in touch with me by writing 
 me an email at [hi@ricostacruz.com].
 
-[Transit]: http://ricostacruz.com/transit
+[Transit]: http://ricostacruz.com/jquery.transit
 [Flatdoc]: http://ricostacruz.com/flatdoc
 [Js2coffee]: http://js2coffee.org
 [NProgress]: http://ricostacruz.com/nprogress
