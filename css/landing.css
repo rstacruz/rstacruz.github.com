@@ -118,6 +118,7 @@ body,
 .content,
 .links,
 .links a,
+.signature,
 ul, ol, p {
   transition: all 250ms ease;
 }
@@ -128,6 +129,7 @@ ul, ol, p {
   .content { margin: 45px; }
   .links { text-align: center; margin-top: 40px; }
   .links a { margin-right: 0; }
+  .signature { text-align: center; }
   ul, ol, p { margin: 1.35em 0; }
 }
 
