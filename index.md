@@ -7,7 +7,7 @@ JavaScript, Ruby, and UI design.
 
 I am an open-source contributor and I like making things that help people
 with their work. I am the author of projects such as [Transit], [Js2coffee], 
-     [Nprogress], [Mina], [Ubuntu Dust], and [more][Github].
+     [Nprogress], [Flatdoc], [Mina], [Ubuntu Dust], and [many more][Github].
 
 I manage the [Manila.js] community, hosted [JSConf Asia 2013], and regularly 
 speak in conferences.
@@ -16,6 +16,7 @@ __[You should follow me on Twitter.][twitter]__ Get in touch with me by writing
 me an email at [hi@ricostacruz.com].
 
 [Transit]: http://ricostacruz.com/transit
+[Flatdoc]: http://ricostacruz.com/flatdoc
 [Js2coffee]: http://js2coffee.org
 [NProgress]: http://ricostacruz.com/nprogress
 [Mina]: https://github.com/mina-deploy/mina
