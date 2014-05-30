@@ -1,4 +1,0 @@
-    http://github.com/rstacruz/rstacruz.github.com/tree/hyde
-
-    git clone git@github.com:rstacruz/rstacruz.github.com.git -b hyde   rstacruz
-    git clone git@github.com:rstacruz/rstacruz.github.com.git -b master rstacruz/public
