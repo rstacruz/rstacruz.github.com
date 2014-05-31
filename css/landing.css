@@ -126,7 +126,7 @@ ul, ol, p {
 /* tablet */
 @media (max-width: 768px) {
   body { font-size: 16px; line-height: 1.6; }
-  .content { margin: 45px; }
+  .content { margin: 45px auto; }
   .links { text-align: center; margin-top: 40px; }
   .links a { margin-right: 0; }
   .signature { text-align: center; }
@@ -135,7 +135,8 @@ ul, ol, p {
 
 /* mobile */
 @media (max-width: 468px) {
-  body { font-size: 14px; line-height: 1.6; }
+  body { font-size: 15px; line-height: 1.6; color: #222; }
+  a { color: #111; }
   .content { margin: 15px; }
   .links { text-align: center; margin-top: 20px; }
   .links a { margin-right: 0; }
