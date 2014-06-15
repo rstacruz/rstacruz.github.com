@@ -154,28 +154,30 @@ li > strong:first-child {
  * post
  */
 
-.layout-post body {
+html.layout-post body {
   font-size: 22px;
-  font-weight: 400;
+  font-family: proxima nova, sans-serif;
+  color: #30303a;
 }
 
-.layout-post p,
-.layout-post ul,
-.layout-post ol,
-.layout-post h2,
-.layout-post h3,
-.layout-post blockquote,
-.layout-post hr {
+.post-headline,
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content h2,
+.post-content h3,
+.post-content blockquote,
+.post-content hr {
   margin: 40px auto;
   max-width: 730px;
 }
 
-.layout-post hr {
+.post-content hr {
   width: 50px;
   display: block;
 }
 
-.layout-post h2 {
+.post-content h2 {
   font-weight: bold;
   font-size: 1.2em;
   color: #111;
@@ -184,22 +186,81 @@ li > strong:first-child {
   letter-spacing: 1px;
 }
 
-.layout-post h3 {
+.post-content .pull-heading {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #111;
+  text-align: center;
+  max-width: 800px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.post-content h3 {
   font-weight: bold;
   font-size: 1em;
   color: #111;
 }
 
-.layout-post h3 + p {
-  margin-top: -20px;
+.post-content h3 + p {
+  margin-top: -40px;
 }
 
-.layout-post blockquote {
+.post-content blockquote {
   max-width: 960px;
   font-size: 1.5em;
   text-align: center;
 }
 
-.layout-post blockquote > p {
+.post-content blockquote > p {
   max-width: 960px;
 }
+
+.panorama-section {
+  width: 100%;
+
+  padding-top: 360px;
+  padding-bottom: 40px;
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  color: #ccc;
+  background: #20232a;
+}
+
+/*
+ * pano
+ */
+
+.panorama-section h3,
+.panorama-section h2 {
+  color: #fff;
+}
+
+/*
+ * post headline
+ */
+
+.post-headline {
+  margin: 70px auto;
+}
+
+.post-headline h1 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.post-headline h5 {
+  font-size: 0.8em;
+  text-align: center;
+  color: #999;
+  margin: 0;
+  padding: 0;
+}
+
