@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: landing
 ---
 
 I am a web developer helping make the world a better place through 

@@ -1,0 +1,43 @@
+---
+html_class: layout-landing
+---
+
+{% include head.html %}
+
+  <link href='/assets/landing.css' rel='stylesheet' type='text/css'>
+  <title>Rico Sta. Cruz</title>
+
+{% include body.html %}
+
+  <div class='content'>
+    {{ content }}
+    <div class='links'>
+      <a href="https://twitter.com/rstacruz">
+        <i class='ion-social-twitter-outline'></i>
+      </a>
+      <a href="https://github.com/rstacruz">
+        <i class='ion-social-github-outline'></i>
+      </a>
+      <a href="http://dribbble.com/rstacruz">
+        <i class='ion-social-dribbble-outline'></i>
+      </a>
+      <a href="http://ph.linkedin.com/in/ricostacruz">
+        <i class='ion-social-linkedin'></i>
+      </a>
+    </div>
+    <div class='signature'>
+      &mdash; @rstacruz
+    </div>
+
+    {% if site.posts %}
+      {% for post in site.posts %}
+        <a href="{{ post.url }}">
+          <strong>{{ post.title }}</strong>
+          <span>{{ post.date | date_to_string }}</span>
+        </a>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+
+{% include end.html %}

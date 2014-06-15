@@ -1,5 +1,5 @@
 all:
-	jekyll build
+	jekyll build --drafts
 
 start:
 	@echo "=> starting server and watching for changes"
