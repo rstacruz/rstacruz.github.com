@@ -2,3 +2,12 @@ markdown: kramdown
 permalink: /:title.html
 title: Rico Sta. Cruz
 author: Rico Sta. Cruz
+name: RicoStaCruz.com
+hostname: ricostacruz.com
+
+facebook:
+  app_id: 169204529787544
+  admin: ricostacruz
+
+analytics:
+  id: "UA-20473929-1"

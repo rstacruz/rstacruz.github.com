@@ -1,5 +1,6 @@
 ---
 layout: landing
+description: "Personal site of web developer/designer Rico Sta. Cruz."
 ---
 
 I am a web developer helping make the world a better place through 

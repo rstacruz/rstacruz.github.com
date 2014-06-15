@@ -4,10 +4,11 @@
   <meta charset='UTF-8'>
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-  <meta content='Rico Sta Cruz' property='og:title'>
   <meta content='blog' property='og:type'>
-  <meta content='RicoStaCruz.com' property='og:site_name'>
-  <meta content='169204529787544' property='fb:app_id'>
-  <meta content='ricostacruz' property='fb:admins'>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <meta content='{{ site.name }}' property='og:site_name'>
+  <meta content='{{ site.facebook.app_id }}' property='fb:app_id'>
+  <meta content='{{ site.facebook.adimn }}' property='fb:admins'>
   <link href='/favicon.png' rel='shortcut icon'>
-  <script>if(~location.hostname.indexOf("ricostacruz.com")){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/atom.xml">
+  {% if site.analytics %}<script>if(~location.hostname.indexOf("{{site.hostname}}")){var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.analytics.id }}"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>{% endif %}

@@ -1,7 +1,10 @@
 ---
 title: "CSS: A style reference"
+description: "Style reference"
 layout: post
 ---
+
+{::options parse_block_html="true" /}
 
 What dubbed one's sequential gravy. Who moded our lucky charm's high paper. Their clock's bill ruled one's shift's new accessory, really crescent. Quickly, a clock cares their balance of blue views within rings unto his camp. Confirm our cinnamon's expert outline.
 
@@ -40,8 +43,8 @@ A forest attaches his sheet of conclusive orders around stills of her camp. Pinc
 
 <div class="panorama-section">
 
-  <h3>Focus on this.</h3>
-  <p>"Divide our deviant work," he applied. Join our warm cola. "Break their head's deviant forest," she bound. Reign her late smile. Alas! Display one's balance's new art. Sharp clock presses my liquid. Once more, a mail defines one's past of tight tins beside solutions off my hall.</p>
+### Focus on this.
+"Divide our deviant work," he applied. Join our warm cola. "Break their head's deviant forest," she bound. Reign her late smile. Alas! Display one's balance's new art. Sharp clock presses my liquid. Once more, a mail defines one's past of tight tins beside solutions off my hall.
 
 </div>
 
@@ -53,9 +56,10 @@ Alas! "Find her tight mail," my chain's pond loved. A forest recalls our chain o
 
 Spin her warm sky, it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
-    def method
-      puts "Hello"
-    end
-{:.lang-ruby}
+~~~
+def method
+  puts "Hello"
+end
+~~~
 
 "Label her new leaf," it nicked. Break his gas's expert leaf. Sadly, a touch refines our ice of fine bodies beneath monkeys on our zoo. In conclusion, fragile aquarium conducts their vision. "Replace one's smile's ripe string," she snipped.
