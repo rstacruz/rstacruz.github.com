@@ -149,3 +149,57 @@ li > strong:first-child {
   font-weight: bold;
   margin-right: 10px;
 }
+
+/*
+ * post
+ */
+
+.layout-post body {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.layout-post p,
+.layout-post ul,
+.layout-post ol,
+.layout-post h2,
+.layout-post h3,
+.layout-post blockquote,
+.layout-post hr {
+  margin: 40px auto;
+  max-width: 730px;
+}
+
+.layout-post hr {
+  width: 50px;
+  display: block;
+}
+
+.layout-post h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.layout-post h3 {
+  font-weight: bold;
+  font-size: 1em;
+  color: #111;
+}
+
+.layout-post h3 + p {
+  margin-top: -20px;
+}
+
+.layout-post blockquote {
+  max-width: 960px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.layout-post blockquote > p {
+  max-width: 960px;
+}
