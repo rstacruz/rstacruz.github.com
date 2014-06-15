@@ -155,7 +155,7 @@ li > strong:first-child {
  */
 
 html.layout-post body {
-  font-size: 22px;
+  font-size: 20px;
   font-family: proxima nova, sans-serif;
   color: #30303a;
 }
@@ -167,9 +167,23 @@ html.layout-post body {
 .post-content h2,
 .post-content h3,
 .post-content blockquote,
+.post-content pre>code,
 .post-content hr {
   margin: 40px auto;
-  max-width: 730px;
+  max-width: 650px;
+  display: block;
+}
+
+.post-content pre {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: #fafafa;
+  margin: 40px auto;
+  font-size: 0.8em;
+}
+
+pre, code {
+  font-family: menlo, monospace;
 }
 
 .post-content hr {
@@ -191,7 +205,7 @@ html.layout-post body {
   font-size: 1.3em;
   color: #111;
   text-align: center;
-  max-width: 800px;
+  max-width: 750px;
   text-transform: none;
   letter-spacing: 0;
   line-height: 1.4;
@@ -199,22 +213,24 @@ html.layout-post body {
 
 .post-content h3 {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.1em;
   color: #111;
 }
 
 .post-content h3 + p {
-  margin-top: -40px;
+  margin-top: -36px;
 }
 
 .post-content blockquote {
-  max-width: 960px;
-  font-size: 1.5em;
+  max-width: 850px;
+  font-size: 1.4em;
+  line-height: 1.5;
   text-align: center;
+  font-style: italic;
 }
 
 .post-content blockquote > p {
-  max-width: 960px;
+  max-width: 900px;
 }
 
 .panorama-section {
