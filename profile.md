@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: landing
 ---
 
 Rico Sta. Cruz is the web developer/designer behind many popular open source 
