@@ -23,7 +23,7 @@ kramdown:
 
 # Site settings
 permalink: /:title.html
-exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock", "_"]
+exclude: ["Makefile", "README.md", "_/Gemfile", "_/Gemfile.lock",  "CNAME"]
 
 # Site info
 meta:

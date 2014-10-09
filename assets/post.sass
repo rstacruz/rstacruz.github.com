@@ -218,10 +218,28 @@ code, em, i
   > hr
     display: block
     width: 80px
-    margin: ($margin * 1.5) auto
+    margin: ($margin * 2) auto
     background: $line
     height: 1px
     border: 0
+
+  > hr.-stars
+    height: auto
+    background: transparent
+    text-align: center
+    margin: ($margin * 2) auto
+    width: auto
+    text-align: center
+
+    &:before
+      content: '* * * *'
+      font-family: $fira
+      font-size: 0.8em
+      white-space: nowrap
+      letter-spacing: 6px
+
+      position: relative
+      top: 0.2em
 
   > h2,
   > .pull-quote
