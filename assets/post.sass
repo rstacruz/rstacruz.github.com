@@ -183,6 +183,17 @@ code, em, i
   &
     line-height: 1.65
 
+  a, a:visited
+    color: $grey
+    text-decoration: none
+    border-bottom: solid 2px rgba($black, 0.1)
+    padding-bottom: 1px
+
+  a:hover
+    color: $accent
+    border-bottom: solid 2px rgba($accent, 0.5)
+    transition: all 0 linear
+
   // each block
   >
     p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block, .pull-quote
@@ -215,7 +226,29 @@ code, em, i
         + p
           margin-top: 0
 
-  > hr
+      h4
+        color: $grey
+
+  ol li
+    list-style: decimal outside
+
+  ul li
+    list-style: disc outside
+
+  ol li, ul li
+    margin-left: 2em
+
+  /* image */
+
+  p > img
+    width: 100%
+
+  > p.large-image
+    max-width: ($width * 1.35)
+
+  /* hr */
+
+  hr
     display: block
     width: 80px
     margin: ($margin * 2) auto
@@ -223,7 +256,7 @@ code, em, i
     height: 1px
     border: 0
 
-  > hr.-stars
+  hr.-stars
     height: auto
     background: transparent
     text-align: center
@@ -241,34 +274,40 @@ code, em, i
       position: relative
       top: 0.2em
 
-  > h2,
-  > .pull-quote
-    $fs: 1.6em
+  /* big heading */
+
+  h2,
+  .pull-quote
     font-family: $serif
     font-weight: 300
-    font-size: $fs
     line-height: 1.6
     font-style: italic
     color: $black
     max-width: 800px
     text-align: center
 
-  > .pull-quote
+  .pull-quote
     $fs: 1.6em
+    font-size: $fs
     margin-top: ($margin / $fs) * 2.5
     margin-bottom: ($margin / $fs) * 2.5
 
-  > h2
-    $fs: 1.6em
+  h2
+    $fs: 1.8em
+    font-size: $fs
     margin-top: ($margin / $fs) * 3
     margin-bottom: ($margin / $fs) * 2
 
-  > p.brief
+  /* brief text */
+
+  p.brief
     font-size: 1.2em
     line-height: 1.55em
     color: #888
 
-  > h3
+  /* small heading */
+
+  h3
     &
       font-weight: bold
       font-family: $fira
@@ -289,7 +328,10 @@ code, em, i
     max-width: ($width - 40px)
     font-style: italic
 
-// Coderay's extra markup
+/*
+ * coderay's ceremonial block
+ */
+
 .CodeRay
   &, > .code
     margin: 0
@@ -335,8 +377,10 @@ code, em, i
     border-bottom: solid 1px $line
     padding: 20px 10px 0 20px
 
-  h2, h3, h4
-    color: $black
+    >
+      h2, h3, h4
+        color: $black
+        font-family: $fira
 
   // TODO: sucks
   @media (min-width: $xs-max)
@@ -363,7 +407,7 @@ code, em, i
 .panorama-section,
 .post-content>.panorama-section
   &
-    background: #1a8
+    background: #111
     width: 100%
     max-width: none
     @extend %content-area
@@ -373,8 +417,24 @@ code, em, i
     padding-top: $margin * 2
     padding-bottom: $margin * 2
 
+    position: relative
+
   &
     color: rgba(white, 0.7)
+
+  > *
+    position: relative
+    z-index: 1
+
+  > .backdrop
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-position: center center
+    background-size: cover
+    z-index: 0
 
   > h3
     color: white

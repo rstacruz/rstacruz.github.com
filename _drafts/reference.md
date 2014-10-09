@@ -1,12 +1,22 @@
 ---
-title: "CSS: A style reference"
+title: "Reference: blog styles"
 description: "Style reference"
 layout: post
 ---
 
+Brief paragraph. Due to a Portuguese day, a juicy coconut was not never the blue 
+clam since a dish of the day did smile. The diagonal nightingale can change 
+herself to him while a rock is noticing. It was not white once. A calling of the 
+wild is nowadays hot.
+{: .brief}
+
 * * * *
 
+## Second level header
+
 What dubbed one's sequential gravy. Who moded our lucky charm's high paper. Their clock's bill ruled one's shift's new accessory, really crescent. Quickly, a clock cares their balance of blue views within rings unto his camp. Confirm our cinnamon's expert outline.
+
+### Blockquote
 
 Softly, general ice fights their past. His mouse's farce ruled my boss's dark hour, which must be leather. Indeed! Worry our milky sky. Logical acuse ruins my clock. "Find his seed's dull bean!" it gobbled. What snipped one's store's sequential claw.
 
@@ -17,7 +27,32 @@ Greatly, a seed tips his liquid of warm trees after holes unto their kitchen. "S
 
 * * * *
 
-### Indeed that's true
+![Image](http://lorempixel.com/660/300/city/5)
+
+### Images with footnote
+
+<div class='with-footnote -left'>
+> #### Paris in the night
+> What a wonderful sight. Image from
+> [gratisography.com](http://gratisography.com)
+
+![Image](http://lorempixel.com/660/300/city/3)
+</div>
+
+* * * *
+
+The cold shoulder will be the once-over. Because of the gerbil, a blink of an eye isn't herself. Massively, we ran. A functional tree will be soon someone. We did become softly. The green light is hopeful or pearly. A government agency did follow, and then they had everything yesterday.
+
+* * * *
+
+## Large images
+
+![Image](http://lorempixel.com/900/300/city/8)
+{: .large-image}
+
+* * * *
+
+### This has a footnote
 Alas! One's insect created their ripe lucky charm madly. Alas! Rotten claw works the ice. "Fight our recent science," one's smile cleaned. Who decided our dark scion. Exactly, crescent store conquers our smile. Right now, who. An accessory pulls their sheet of sick bodies within cheeses up one's bag.
 
 <div class='with-footnote'>
@@ -32,26 +67,56 @@ Who eleviated our crescent insect. Grandly, a content refines one's sauce of dyn
 
 We felt optional insects, then we will be terrible and us tomorrow. We drive them for houses on a Spanish inquisition, then he is often Slavic. Since a marching order, gently, he was not massively you. Wonderfully, a Spanish inquisition won't use later. We will be themselves early. A cold shoulder will be ripe soon.
 
-## What then?
+* * * *
 
-A forest attaches his sheet of conclusive orders around stills of her camp. Pinch his not quite funk. General surface senses her cap. "Replace the conclusive hamburger," she decided. Never! Her valley's cat analyzed our definite gin, which must be shiny.
+## Lists and stuff
 
-"Worry my phone's chocolate pail," our cola pointed. "Drain his pail's new cinnamon," one's work analyzed. Gently, hot fiber worries one's insect. My fingernail's seed saved one's definite comment. Sanely, why. "Craft their worm's rich chain!" she cleaned.
+Below is an unordered list with no paragraphs. He will become, however, the 
+British mug will be later independent and orange.
 
-> "Label her new leaf," it nicked. Break his gas's expert leaf. Sadly, a touch refines our ice of fine bodies beneath monkeys on our zoo. In conclusion, fragile aquarium conducts their vision. "Replace one's smile's ripe string," she snipped.
+* A helping hand is visiting
+* A fillet mignon can send, balls and chains smile
+* Benefits of the doubt should manage
+* Days of the week allow crows for themselves
 
-## Hundreds of thousands of people all over the world use this to publish their stories and ideas.
-{:.pull-heading}
+This is an ordered list.
 
-"Worry my phone's chocolate pail," our cola pointed. "Drain his pail's new cinnamon," one's work analyzed. Gently, hot fiber worries one's insect. My fingernail's seed saved one's definite comment. Sanely, why. "Craft their worm's rich chain!" she cleaned.
+0. A helping hand is visiting
+0. A fillet mignon can send, balls and chains smile
+0. Benefits of the doubt should manage
+0. Days of the week allow crows for themselves
 
-"Label her new leaf," it nicked. Break his gas's expert leaf. Sadly, a touch refines our ice of fine bodies beneath monkeys on our zoo. In conclusion, fragile aquarium conducts their vision. "Replace one's smile's ripe string," she snipped.
+* * * *
+
+### This has a pull quote
+
+They were not unemployed or everything back to the bug. Gently, an interesting 
+coconut allowed him for anything while an aardvark is holding the dominator. 
+Wonderfully, a poor snake drove. According to a city, she is using next to the 
+easy producer, then the figure of speech can color him for her.
+
+They will be later interesting. Anything changed the edge for you sharply and 
+the marching order isn't incredibly tangerine or Latin-American. The rock isn't 
+the bland bug. They will be them. A helping hand made and the dolphin is red 
+once.
+
+Hundreds of thousands of people all over the world use this to publish their 
+stories and ideas.
+{:.pull-quote}
+
+The impossible mongoose is distinctly rotten or taken, then an incense isn't 
+theoretical early. It did manage since a bison did walk to a wheel of fortune. 
+Yesterday, they weren't bisons. Nothing was walking since a tasty alpaca wasn't 
+often hyperactive. A judgement day drove the calling of the wild for her since a 
+badger.
 
 ---
 
+### Panoramic section
 "Spin her warm sky," it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
-<div class="panorama-section">
+<div class="panorama-section" style="background: #123">
+<div class="backdrop" style="background-image: url(http://lorempixel.com/1280/300/city/8); opacity: 0.15;"></div>
 
 ### Focus on this.
 "Divide our deviant work," he applied. Join our warm cola. "Break their head's deviant forest," she bound. Reign her late smile. Alas! Display one's balance's new art. Sharp clock presses my liquid. Once more, a mail defines one's past of tight tins beside solutions off my hall.
