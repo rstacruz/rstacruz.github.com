@@ -11,7 +11,7 @@ JavaScript community [Manila.js]. He was also previously a cofounder at
 * __Site:__ [ricostacruz.com]
 * __Twitter:__ [@rstacruz](https://twitter.com/rstacruz)
 * __GitHub:__ [rstacruz](https://github.com/rstacruz)
-* __Picture:__ [see image](assets/avatar.jpg)
+* __Picture:__ [see image](images/avatar.jpg)
 
 [top contributors]: http://git.io/top
 [ricostacruz.com]: http://ricostacruz.com
