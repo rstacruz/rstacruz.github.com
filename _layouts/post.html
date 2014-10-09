@@ -10,17 +10,25 @@ html_class: layout-post
 
 <div class='blog-header'>
   <div>
-    <h1>My blog</h1>
+    <h1><a href="/">{{ site.meta.name }}</a></h1>
   </div>
 </div>
 
-<div class="post-headline">
-  <h1>{{ page.title }}</h1>
-  <h5>Rico Sta. Cruz &middot; 29 May 2014</h5>
-</div>
+<div class="post-item">
+  <div class="post-headline">
+    <h1>
+      <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
+    </h1>
+    <h5>
+      {{ site.meta.author }}
+      &middot;
+      {{ page.modified | date: "%m/%d/%Y" }}
+    </h5>
+  </div>
 
-<div class="post-content">
-  {{ content }}
+  <div class="post-content">
+    {{ content }}
+  </div>
 </div>
 
 {% include end.html %}
