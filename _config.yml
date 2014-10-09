@@ -16,7 +16,7 @@ kramdown:
 
 # Site settings
 permalink: /:title.html
-exclude: ["Makefile"]
+exclude: ["Makefile", "Readme.md", "Gemfile", "Gemfile.lock"]
 
 # Site info
 meta:

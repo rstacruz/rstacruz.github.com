@@ -1,2 +1,2 @@
 start:
-	jekyll serve --drafts --watch
+	bundle exec jekyll serve --drafts --watch
