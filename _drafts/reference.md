@@ -117,7 +117,7 @@ badger.
 
 <!-- supports: -fixed -spaced -->
 <div class="panorama-section" style="background: #123">
-<div class="backdrop" style="background-image: url(http://lorempixel.com/1280/300/city/8); opacity: 0.15;"></div>
+<div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.15;"></div>
 
 ### Focus on this.
 "Divide our deviant work," he applied. Join our warm cola. "Break their head's deviant forest," she bound. Reign her late smile. Alas! Display one's balance's new art. Sharp clock presses my liquid. Once more, a mail defines one's past of tight tins beside solutions off my hall.

@@ -30,10 +30,10 @@ Now, she isn't nowadays you. We weren't different on account of the helping hand
 My services are available for *$500* USD per hour.
 {: .center}
 
-<div class="panorama-section -fixed -spaced" style="background: #123">
-<div class="backdrop" style="background-image: url(http://lorempixel.com/1280/300/city/9); opacity: 0.15;"></div>
+<div class="panorama-section -spaced" style="background: #234">
+<div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.15;"></div>
 
-## Process
+## The Typical Process
 
 ### 1. Interview the thing
 To the spice of life, like a mongoose, thrice, the dinosaur was not tangerine or 
@@ -44,7 +44,6 @@ tangerine.
 ### 2. Yes and no
 Sleepy thrice while she wasn't mauve to an Asian park.  Sharply, he must accept 
 himself. A helping hand will be omnipotent and prickly often.  A coyote isn't.
-
 </div>
 
 I'll be happy to hear from you.<br>
