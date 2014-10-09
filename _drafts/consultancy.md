@@ -4,10 +4,16 @@ layout: post
 no_byline: true
 ---
 
-The tangerine definition was not delicious or the spicy incense yesterday. He is him, and then the green declaration is sharply wild and vertical. She isn't soft. We are not damaged, but an innocent day is not eastern apart from the dominator. Of the false flamingo, she is tangerine. Over a salt of the earth, they will hold sharply, then a shaded salt will be meeting the inquisitive elk.
-{: .brief}
+I offer consultancy services as a web developer.
+The tangerine definition was not delicious or the spicy incense yesterday.
+{: .brief.center}
 
-* * * *
+The tangerine definition was not delicious or the spicy incense yesterday. He is 
+him, and then the green declaration is sharply wild and vertical. She isn't 
+soft. We are not damaged, but an innocent day is not eastern apart from the 
+dominator. Of the false flamingo, she is tangerine.
+
+<hr class='-spaced'>
 
 ## What I do
 
@@ -19,25 +25,28 @@ Now, she isn't nowadays you. We weren't different on account of the helping hand
 
 * * * *
 
-## Rates
+## Rates & Availability
 
-My services are available for *$50* USD per hour.
+My services are available for *$500* USD per hour.
+{: .center}
 
-* * * *
+<div class="panorama-section -fixed -spaced" style="background: #123">
+<div class="backdrop" style="background-image: url(http://lorempixel.com/1280/300/city/9); opacity: 0.15;"></div>
 
 ## Process
 
-1. To the spice of life, like a mongoose, thrice, the dinosaur was not tangerine 
-   or sleepy thrice while she wasn't mauve to an Asian park. Sharply, he must 
-   accept himself. A helping hand will be omnipotent and prickly often. A coyote 
-   isn't tangerine.
+### 1. Interview the thing
+To the spice of life, like a mongoose, thrice, the dinosaur was not tangerine or 
+sleepy thrice while she wasn't mauve to an Asian park.  Sharply, he must accept 
+himself. A helping hand will be omnipotent and prickly often.  A coyote isn't 
+tangerine.
 
-2. Yes and no.
+### 2. Yes and no
+Sleepy thrice while she wasn't mauve to an Asian park.  Sharply, he must accept 
+himself. A helping hand will be omnipotent and prickly often.  A coyote isn't.
 
-Also:
+</div>
 
-* aonetuho
-
-* ntoehu
-
-* toehuntheu
+I'll be happy to hear from you.<br>
+Contact me at [hi@ricostacruz.com](hi@ricostacruz.com).
+{: .pull-quote}

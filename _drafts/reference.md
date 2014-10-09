@@ -8,7 +8,7 @@ Brief paragraph. Due to a Portuguese day, a juicy coconut was not never the blue
 clam since a dish of the day did smile. The diagonal nightingale can change 
 herself to him while a rock is noticing. It was not white once. A calling of the 
 wild is nowadays hot.
-{: .brief}
+{: .brief.center}
 
 * * * *
 
@@ -115,6 +115,7 @@ badger.
 ### Panoramic section
 "Spin her warm sky," it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
+<!-- supports: -fixed -spaced -->
 <div class="panorama-section" style="background: #123">
 <div class="backdrop" style="background-image: url(http://lorempixel.com/1280/300/city/8); opacity: 0.15;"></div>
 
