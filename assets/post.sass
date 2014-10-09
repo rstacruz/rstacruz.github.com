@@ -11,24 +11,38 @@ $black: #404040
 $xblack: #131313
 $bg: #fff
 
-$margin: 25px
+$margin: 1.4em
+$xs-margin: 1.4em
 
 $fira: 'fira sans', sans-serif
 $source: 'source sans pro', sans-serif
 $lato: $source
 $serif: 'libre baskerville', serif
 
+$xs-max: 760px
+
+$width: 660px
+
 /*
  * fonts!
  */
 
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,700)
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,700)
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700)
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic)
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700)
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400)
 @import url(http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css)
 @import 'reset'
 @import 'antialias'
+
+html.loading
+  opacity: 0
+  transition: none
+
+html.loaded
+  opacity: 1
+  transition: all 250ms linear 1000ms
 
 /*
  * base
@@ -41,11 +55,39 @@ html, body
 html
   background: $bg
 
+*
+  transition: all 250ms linear
+
 body
-  font-family: $lato
-  font-size: 13pt
-  line-height: 1.5
-  color: $black
+  &
+    font-family: $lato
+    font-size: 12pt
+    line-height: 1.5
+    color: $black
+
+  @media (min-width: 1000px)
+    font-size: 13pt
+
+  @media (max-width: $xs-max)
+    font-size: 11pt
+
+/*
+ * blog header
+ */
+
+.blog-header
+  > div
+    margin: 0 $margin
+    height: 50px
+    border-bottom: solid 1px rgba($line, 0.25)
+
+  h1
+    line-height: 50px
+    text-transform: uppercase
+    font-family: $source
+    color: $line
+    font-size: 0.8em
+    text-align: center
 
 /*
  * headline
@@ -54,19 +96,30 @@ body
 .post-headline
   &
     text-align: center
-    padding-top: 100px
+    padding-top: 200px
+    padding-left: $margin
+    padding-right: $margin
+
+    @media (max-width: $xs-max)
+      padding-top: $margin * 2
 
   h1
-    font-weight: 300
+    font-weight: 100
     font-family: $fira
-    font-size: 2.5em
+    line-height: 1.1
+    font-size: 2.8em
     color: $xblack
 
+    @media (max-width: $xs-max)
+      font-size: 2.0em
+      line-height: 1.2
+
   h5
+    margin-top: 5px
     text-transform: uppercase
     font-family: 'source sans pro', sans-serif
     font-weight: 400
-    font-size: 0.9em
+    font-size: 0.8em
     letter-spacing: 1px
     color: $grey
 
@@ -79,18 +132,55 @@ body
     background: $line
 
 /*
+ * pre's
+ */
+
+%code-block
+  display: block
+  color: #666
+  padding: 20px
+  background: #fdfdfd
+  border-radius: 2px
+  font-family: ubuntu mono, monaco, monospace
+  font-size: 0.9em
+  line-height: 1.4
+
+/*
  * content
  */
 
-.-content-area
+%content-area
   &
     line-height: 1.65
 
-  > p, div, ul, ol, article, blockquote, pre, h2, h3, h4, h5
+  // each block
+  > p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block
     margin: $margin auto
-    max-width: 660px
+    max-width: $width
     padding-left: 20px
     padding-right: 20px
+
+    @media (max-width: $xs-max)
+      max-width: none
+      padding-left: 15px
+      padding-right: 15px
+
+  // inset blocks
+  blockquote, li
+    > p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block
+      padding: 0
+      margin: $margin 0
+      &:first-child
+        margin-top: 0
+    > h2, h3, h4
+      display: block
+      font-weight: bold
+      font-family: $fira
+      color: $xblack
+      font-size: 1em
+      margin: 0
+      + p
+        margin-top: 0
 
   > hr
     display: block
@@ -101,42 +191,86 @@ body
     border: 0
 
   > h2
+    $fs: 1.8em
     font-family: $serif
-    font-size: 2em
+    font-size: $fs
     line-height: 1.4
     font-style: italic
     color: $grey
     max-width: 800px
     text-align: center
 
-    margin-top: $margin * 2
-    margin-bottom: $margin * 2
+    margin-top: ($margin / $fs) * 2
+    margin-bottom: ($margin / $fs) * 2
 
   > h3
     &
       font-weight: bold
       font-family: $fira
-      font-size: 1.3em
+      font-size: 1.2em
       color: $xblack
     + p
-      margin-top: -1 * $margin
+      margin-top: ($margin * -1.2)
 
-  pre
-    > code
-      display: block
-      padding: 20px
-      background: #fdfdfd
-      border-radius: 2px
-      font-family: monaco, monospace
-      font-size: 0.8em
-      line-height: 1.5
+  // Coderay's extra markup
+  .CodeRay, .CodeRay > .code
+    margin: 0
+    padding: 0
+
+  pre > code, .CodeRay pre
+    @extend %code-block
+
+  > blockquote
+    border-left: solid 2px $line
+    padding-left: $margin
+    color: $grey
+    max-width: ($width - 40px)
+    font-style: italic
+
 
 /*
  * actual content
  */
 
 .post-content
-  @extend .-content-area
+  @extend %content-area
+
+/*
+ * footnotes
+ */
+
+.with-footnote
+  @extend %content-area
+  width: $width
+  margin: 0 auto
+
+  @media (max-width: $xs-max)
+    padding: 0
+    margin: 0
+    width: auto
+
+  > blockquote
+    padding: 0
+    border: 0
+
+    font-style: normal
+    font-size: 0.75em
+    line-height: 1.5
+
+    border-top: solid 1px $line
+    border-bottom: solid 1px $line
+    padding: 20px 10px 0 20px
+
+    // TODO: sucks
+    @media (min-width: $xs-max)
+      border: 0
+      border-top: solid 1px $line
+      padding: 10px 0 0 0
+
+      margin-top: 10px
+      width: 170px
+      float: right
+      margin-right: -190px
 
 /*
  * panorama
@@ -145,10 +279,10 @@ body
 .panorama-section,
 .post-content>.panorama-section
   &
-    background: black
+    background: #1a8
     width: 100%
     max-width: none
-    @extend .-content-area
+    @extend %content-area
     overflow: hidden
     margin-top: $margin * 2
     margin-bottom: $margin * 2
@@ -156,7 +290,17 @@ body
     padding-bottom: $margin * 2
 
   &
-    color: #aaa
+    color: rgba(white, 0.7)
 
   > h3
     color: white
+
+/* syntax highlighting */
+
+.CodeRay
+  .regexp, .string, .number
+    color: #4c8
+
+  .keyword, .reserved
+    color: #346
+    font-weight: bold

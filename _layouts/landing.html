@@ -30,12 +30,14 @@ title_tag: Rico Sta. Cruz
     </div>
 
     {% if site.posts %}
-      {% for post in site.posts %}
-        <a href="{{ post.url }}">
-          <strong>{{ post.title }}</strong>
-          <span>{{ post.date | date_to_string }}</span>
-        </a>
-      {% endfor %}
+      <div class='post-list'>
+        {% for post in site.posts %}
+          <a href="{{ post.url }}" class='post-item'>
+            <strong class='title'>{{ post.title }}</strong>
+            <span class='date'>{{ post.date | date_to_string }}</span>
+          </a>
+        {% endfor %}
+      </div>
     {% endif %}
 
   </div>

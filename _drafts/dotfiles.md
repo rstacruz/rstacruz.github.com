@@ -1,5 +1,5 @@
 ---
-title: "Simple dotfiles"
+title: "Simple dotfiles solution"
 description: "How to use dotfiles for fun and profit"
 layout: post
 ---
@@ -19,6 +19,8 @@ They will be salty or Spanish inquisitions. She is speaking me for himself, then
 
 
 ```js
+return class prototype alert('hi');
+
 ~/dotfiles
   ackrc
   vimrc
@@ -27,7 +29,7 @@ They will be salty or Spanish inquisitions. She is speaking me for himself, then
 
 Then add this script as `install.sh`:
 
-```sh
+```js
 echo linking from `pwd -LP`
 for f in *; do
   if [ "$f" != "install.sh" ]; then

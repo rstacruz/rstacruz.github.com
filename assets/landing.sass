@@ -161,3 +161,41 @@ li > strong:first-child
   font-size: 0.7em
   font-weight: bold
   margin-right: 10px
+
+/*
+ * posts
+ */
+
+.post-list
+  display: block
+  margin: 40px 0
+
+.post-item
+  &
+    display: block
+    overflow: hidden
+    padding-top: 2px
+    padding-bottom: 2px
+    font-size: 0.8em
+
+  &, .title, .date
+    line-height: 40px
+
+  &, &:hover
+    border-bottom: solid 1px #eee
+
+  &:first-child
+    border-top: solid 1px #eee
+
+  .title
+    float: left
+    font-weight: 400
+    font-size: 1em
+
+  .date
+    float: right
+    font-size: 0.8em
+    text-transform: uppercase
+    font-weight: 400
+    letter-spacing: 1px
+    color: #888
