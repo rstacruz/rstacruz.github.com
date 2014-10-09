@@ -1,9 +1,16 @@
 markdown: kramdown
-permalink: /:year/:title.html
-title: Rico Sta. Cruz
-author: Rico Sta. Cruz
-name: RicoStaCruz.com
-hostname: ricostacruz.com
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+
+permalink: /:title.html
+
+meta:
+  title: Rico Sta. Cruz
+  author: Rico Sta. Cruz
+  name: Rico Sta. Cruz
+  hostname: ricostacruz.com
 
 facebook:
   app_id: 169204529787544

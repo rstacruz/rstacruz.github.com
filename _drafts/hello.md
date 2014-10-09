@@ -4,8 +4,6 @@ description: "Style reference"
 layout: post
 ---
 
-{::options parse_block_html="true" /}
-
 What dubbed one's sequential gravy. Who moded our lucky charm's high paper. Their clock's bill ruled one's shift's new accessory, really crescent. Quickly, a clock cares their balance of blue views within rings unto his camp. Confirm our cinnamon's expert outline.
 
 Softly, general ice fights their past. His mouse's farce ruled my boss's dark hour, which must be leather. Indeed! Worry our milky sky. Logical acuse ruins my clock. "Find his seed's dull bean!" it gobbled. What snipped one's store's sequential claw.
