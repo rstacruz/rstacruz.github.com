@@ -4,6 +4,8 @@
 
 ## Dev notes
 
+- `make start` to start server
+
 - iterate on the `develop` branch (css changes, etc) and merge to master when 
 ready
 
