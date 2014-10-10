@@ -1,5 +1,5 @@
 ---
-title: "Reference: blog styles"
+title: "Reference Part I"
 description: "Style reference"
 layout: post
 secret: true
@@ -11,7 +11,8 @@ herself to him while a rock is noticing. It was not white once. A calling of the
 wild is nowadays hot.
 {: .brief-intro.center}
 
-* * * *
+![Image](http://lorempixel.com/1440/600/city/9)
+{: .full-image.spaced}
 
 ## Second level header
 
@@ -118,7 +119,7 @@ badger.
 "Spin her warm sky," it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
 <div class="panorama-section" style="background: #123">
-<div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.15;"></div>
+<div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.06;"></div>
 
 ### Focus on this.
 
