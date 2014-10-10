@@ -5,6 +5,7 @@
  * vars
  */
 
+// colors
 $line: #d0d0d0
 $grey: #909090
 $black: #404040
@@ -12,25 +13,23 @@ $xblack: #131313
 $accent: #3c9
 $bg: #fff
 
+// dimensions
 $margin: 1.4em
-$xs-margin: 1.4em
+$xs-max: 520px
+$width: 660px
 
+// fonts
 $fira: 'fira sans', sans-serif
 $source: 'source sans pro', sans-serif
 $body: $source
 $serif: 'merriweather', serif
 $mono: 'fira mono', monaco, monospace
 
-$xs-max: 520px
-
-$width: 660px
-
-/*
- * fonts!
- */
-
+// font imports
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,700|Merriweather:300italic|Source+Sans+Pro:400|Fira+Mono:400,700)
 @import url(http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css)
+
+// imports
 @import 'reset'
 @import 'antialias'
 
@@ -70,29 +69,17 @@ body
     font-size: 10pt
 
 /*
- * blog header
+ * components
  */
 
-.blog-header
-  > div
-    margin: 0 $margin
-    height: 50px
-    border-bottom: solid 1px rgba($line, 0.25)
+@import 'standard-block'
+@import 'code-block'
+@import 'hljs'
 
-  h1
-    line-height: 50px
-    text-transform: uppercase
-    font-family: $source
-    font-weight: 400
-    font-size: 0.8em
-    text-align: center
+@import 'blog-header'
+@import 'pages-list'
+@import 'content-area'
 
-  h1, h1 a
-    color: $line
-    text-decoration: none
-
-  h1 a:hover
-    color: $black
 
 /*
  * post item
@@ -149,231 +136,6 @@ body
     font-size: 0.8em
     letter-spacing: 1px
     color: $grey
-
-/*
- * a paragraph, and so on.
- * has a set width.
- */
-
-%standard-block
-  &
-    margin: $margin auto
-    max-width: $width
-    padding-left: 20px
-    padding-right: 20px
-
-  @media (max-width: $xs-max)
-    max-width: none
-    padding-left: 15px
-    padding-right: 15px
-
-  /* wide format */
-  &.-wide
-    max-width: $width * 1.35
-
-  &.-center
-    text-align: center
-
-  &.-spaced
-    @media (min-width: $xs-max)
-      margin: ($margin * 4) auto
-
-/*
- * code blocks (pre's). This applies to the block inside, not outside.
- */
-
-%code-block
-  display: block
-  color: #666
-  padding: 20px
-  background: #fdfdfd
-  border-left: solid 12px #eafaf4
-  border-radius: 2px
-  font-family: $mono
-  font-size: 0.8em
-  font-style: normal
-  line-height: 1.5
-  letter-spacing: -1px
-
-/*
- * content
- */
-
-%content-area
-  &
-    line-height: 1.65
-
-  /* inlines! */
-
-  a, a:visited
-    color: $grey
-    text-decoration: none
-    border-bottom: solid 2px rgba($black, 0.1)
-    padding-bottom: 0
-
-  a:hover
-    color: $accent
-    border-bottom: solid 2px rgba($accent, 1.0)
-    transition: all 0 linear
-
-  b, strong
-    font-weight: bold
-    font-family: $fira
-    color: $xblack
-
-  code, em, i
-    color: #444
-    font-size: 0.85em
-    font-family: $serif
-    font-style: italic
-    padding: 3px 1px
-
-  // each block
-  >
-    p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block, .pull-quote, hr
-      @extend %standard-block
-  
-  // inset blocks
-  blockquote, li
-    >
-      p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block
-        padding: 0
-        margin: $margin 0
-        &:first-child
-          margin-top: 0
-    >
-      h2, h3, h4
-        display: block
-        font-weight: bold
-        font-family: $fira
-        color: $xblack
-        font-size: 1em
-        margin: 0
-        + p
-          margin-top: 0
-
-      h4
-        color: $grey
-
-  ol li
-    list-style: decimal outside
-
-  ul li
-    list-style: disc outside
-
-  ol li, ul li
-    margin-left: 2em
-
-  /* image */
-
-  p > img
-    width: 100%
-
-  /* hr */
-
-  hr
-    display: block
-    width: 80px
-    background: $line
-    height: 1px
-    border: 0
-    margin: ($margin * 2) auto
-
-  hr.-spaced
-    @media (min-width: $xs-max)
-      margin: ($margin * 4) auto
-
-  hr.-stars
-    height: auto
-    background: transparent
-    text-align: center
-    width: auto
-    text-align: center
-
-    &:before
-      content: '* * * *'
-      font-family: $fira
-      font-size: 0.8em
-      white-space: nowrap
-      letter-spacing: 6px
-
-      position: relative
-      top: 0.2em
-
-  /* big heading */
-
-  h2,
-  .pull-quote
-    font-family: $serif
-    font-weight: 300
-    line-height: 1.6
-    font-style: italic
-    color: $black
-    max-width: 800px
-    text-align: center
-
-  .pull-quote
-    $fs: 1.6em
-    font-size: $fs
-    margin-top: ($margin / $fs) * 1
-    margin-bottom: ($margin / $fs) * 1
-    @media (min-width: $xs-max)
-      margin-top: ($margin / $fs) * 2.5
-      margin-bottom: ($margin / $fs) * 2.5
-
-  h2
-    $fs: 1.8em
-    font-size: $fs
-    margin-top: ($margin / $fs) * 1
-    margin-bottom: ($margin / $fs) * 1
-    @media (min-width: $xs-max)
-      margin-top: ($margin / $fs) * 3
-      margin-bottom: ($margin / $fs) * 2
-
-  /* paragraph variants */
-
-  p.brief-intro
-    font-size: 1.2em
-    line-height: 1.55em
-    color: #888
-
-  /* small heading */
-
-  h3
-    &
-      font-weight: bold
-      font-family: $fira
-      font-size: 1.2em
-      color: $xblack
-      margin-top: $margin * 1.5
-    + p
-      margin-top: ($margin * -1.2)
-
-  pre > code
-    @extend %code-block
-
-  > blockquote
-    border-left: solid 2px $line
-    padding-left: $margin
-    color: $grey
-    max-width: ($width - 40px)
-    font-style: italic
-
-// /*
-//  * coderay's ceremonial block
-//  */
-
-// .CodeRay
-//   &, > .code
-//     margin: 0
-//     padding: 0
-
-//   > .code
-//     @extend %content-area
-
-//   > .code > pre
-//     @extend %code-block
-//     max-width: ($width - 40px)
 
 /*
  * actual content
@@ -482,70 +244,3 @@ body
 
   h2, h3, strong, em, i, code
     color: white
-
-/* syntax highlighting */
-
-.CodeRay
-  .regexp, .string, .number
-    color: #4c8
-
-  .keyword, .reserved
-    color: #346
-    font-weight: bold
-
-.pages-list
-  &
-    max-width: $width
-    margin: $margin auto
-    padding: 0 20px
-    overflow: hidden
-
-  a
-    display: block
-    border-top: solid 1px rgba($line, 0.2)
-    padding: 5px 0
-    text-decoration: none
-    color: $xblack
-    font-weight: bold
-    font-family: $fira
-    font-size: 0.7em
-    overflow: hidden
-    float: left
-    width: 48%
-
-  a:hover
-    color: $accent
-    transition: all 0 linear
-
-  a .date
-    font-weight: 400
-    color: $grey
-    float: right
-    font-size: 0.9em
-    font-family: $source
-
-  a:nth-child(2n+1)
-    margin-right: 4%
-
-/*
- * highlight.js
- */
-
-.hljs-shebang,
-.hljs-comment
-  color: $grey
-  font-style: italic
-  font-family: $serif
-  letter-spacing: 1px
-
-.hljs-string,
-.hljs-number
-  color: $accent
-
-.hljs-keyword,
-.hljs-builtin
-  font-weight: 700
-  color: #234
-
-.hljs-variable
-  color: #346
