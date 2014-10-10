@@ -7,7 +7,7 @@ layout: post
 There are many solutions for managing your home directory's dot files today.  
 For the most part, you don't really need them. Here's a simpler way with no 
 dependencies.
-{: .brief}
+{: .brief-intro}
 
 * * * *
 

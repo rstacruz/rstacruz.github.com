@@ -6,7 +6,7 @@ no_byline: true
 
 I offer consultancy services as a web developer.
 The tangerine definition was not delicious or the spicy incense yesterday.
-{: .brief.center}
+{: .brief-intro.-center}
 
 The tangerine definition was not delicious or the spicy incense yesterday. He is 
 him, and then the green declaration is sharply wild and vertical. She isn't 
@@ -45,7 +45,7 @@ For local engagements in Metro Manila, I'm also available for on-site work.
 ## Rates
 
 My services are available for *$500* USD per hour.
-{: .center}
+{: .-center}
 
 <div class="panorama-section -spaced" style="background: #234; color: rgba(230, 240, 250, 0.5);">
 <div class="backdrop" style="background-image: url(images/bg-process.jpg); 

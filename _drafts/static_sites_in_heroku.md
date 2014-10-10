@@ -9,7 +9,7 @@ layout: post
 Just add an `index.php` to your repository.
 It tells Heroku that the site is a PHP site and that it will be hosted using 
 Apache.
-{: .brief}
+{: .brief-intro}
 
     touch index.php
 

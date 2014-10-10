@@ -49,7 +49,7 @@ The cold shoulder will be the once-over. Because of the gerbil, a blink of an ey
 ## Large images
 
 ![Image](http://lorempixel.com/900/300/city/8)
-{: .large-image}
+{: .-wide}
 
 * * * *
 

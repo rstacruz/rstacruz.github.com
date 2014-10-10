@@ -151,7 +151,35 @@ body
     color: $grey
 
 /*
- * pre's
+ * a paragraph, and so on.
+ * has a set width.
+ */
+
+%standard-block
+  &
+    margin: $margin auto
+    max-width: $width
+    padding-left: 20px
+    padding-right: 20px
+
+  @media (max-width: $xs-max)
+    max-width: none
+    padding-left: 15px
+    padding-right: 15px
+
+  /* wide format */
+  &.-wide
+    max-width: $width * 1.35
+
+  &.-center
+    text-align: center
+
+  &.-spaced
+    @media (min-width: $xs-max)
+      margin: ($margin * 4) auto
+
+/*
+ * code blocks (pre's). This applies to the block inside, not outside.
  */
 
 %code-block
@@ -202,17 +230,9 @@ body
 
   // each block
   >
-    p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block, .pull-quote
-      margin: $margin auto
-      max-width: $width
-      padding-left: 20px
-      padding-right: 20px
-
-      @media (max-width: $xs-max)
-        max-width: none
-        padding-left: 15px
-        padding-right: 15px
-
+    p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block, .pull-quote, hr
+      @extend %standard-block
+  
   // inset blocks
   blockquote, li
     >
@@ -248,9 +268,6 @@ body
 
   p > img
     width: 100%
-
-  > p.large-image
-    max-width: ($width * 1.35)
 
   /* hr */
 
@@ -315,13 +332,10 @@ body
 
   /* paragraph variants */
 
-  p.brief
+  p.brief-intro
     font-size: 1.2em
     line-height: 1.55em
     color: #888
-
-  p.center
-    text-align: center
 
   /* small heading */
 

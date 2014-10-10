@@ -14,3 +14,21 @@ ready
 ## What's here
 
 - `_/` - boilerplate stuff are placed here as much as possible.
+
+- `/pages/ref.html` - style references
+
+Markdown reference
+------------------
+
+### Block variants
+
+ - `.-wide` - makes it wider.
+ - `.-spaced` - big spaces around it.
+ - `.-center` - text align center.
+
+### Blocks
+
+ - `.brief-intro` - a large paragraph.
+ - `.pull-quote` - pull quote.
+ - `hr`
+
