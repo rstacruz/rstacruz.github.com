@@ -28,10 +28,10 @@ Custom blocks. The block variants above should also apply to these. (See `block.
  - `.brief-intro` -- a large paragraph.
  - `.full-image` -- big images.
  - `.pull-quote` -- pull quote.
- - `.panorama-section` -- panoramic section. (variants: `-fixed`)
- - `hr` -- horizontal rule. (variants: `-stars`)
+ - `.panorama-section` -- panoramic section. (variants: `.fixed`)
+ - `hr` -- horizontal rule. (variants: `.stars`)
  - `.with-footnote` -- has a caption. put a blockquote inside it. (variants: 
-     `-left`, `-right`)
+     `.left`, `.right`)
 
 * * * *
 {:.spaced}

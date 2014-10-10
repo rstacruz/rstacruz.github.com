@@ -17,26 +17,3 @@ ready
 
 - `/pages/ref.html` - style references
 
-Markdown reference
-------------------
-
-### Block variants
-
-These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`, 
-      and so on... even `hr`. (See `standard-block.sass`)
-
- - `.wide` - makes it wider.
- - `.spaced` - big spaces around it.
- - `.center` - text align center.
-
-### Blocks
-
-Custom blocks. (See `block.*.sass`)
-
- - `.brief-intro` - a large paragraph.
- - `.pull-quote` - pull quote.
- - `.panorama-section` - panoramic section. (variants: `-fixed`)
- - `hr` - horizontal rule. (variants: `-stars`)
- - `.with-footnote`. - has a caption. put a blockquote inside it. (variants: 
-     `-left`, `-right`)
-

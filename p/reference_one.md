@@ -33,7 +33,7 @@ Greatly, a seed tips his liquid of warm trees after holes unto their kitchen. "S
 
 ### Images with footnote
 
-<div class='with-footnote -left'>
+<div class='with-footnote left'>
 > #### Paris in the night
 > What a wonderful sight. Image from
 > [gratisography.com](http://gratisography.com)
@@ -144,7 +144,7 @@ their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
 A divine intervention won't color him for the blind eye on a dominator. To a crab, it isn't now a dominion, and then nothing isn't false on the bug.
 
-<div class="with-footnote -left">
+<div class="with-footnote left">
 > This is a JavaScript method.<br>
 > Use it wisely.
 

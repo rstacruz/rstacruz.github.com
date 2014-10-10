@@ -16,7 +16,7 @@ dependencies.
 Put your dotfiles (without the dot prefix) in a folder in a repository. You can 
 also put subdirectories in if you like, such as `vim` and `aria2` here below.
 
-<div class='with-footnote -left'>
+<div class='with-footnote left'>
 > #### The dotfiles repo
 > You can keep this repository anywhere you like, such as your projects 
 directory.
@@ -42,7 +42,7 @@ directory.
 Then add this script as `install.sh`. Be sure to `chmod +x install.sh` 
 afterwards.
 
-<div class='with-footnote -left'>
+<div class='with-footnote left'>
 > #### install.sh
 > This works by making `ln -nfs` symlinks of each file into your home directory.
 
