@@ -11,8 +11,15 @@ dependencies.
 
 * * * *
 
+### Keep a Git repository
+
 Put your dotfiles (without the dot prefix) in a folder in a repository. You can 
 also put subdirectories in if you like, such as `vim` and `aria2` here below.
+
+<div class='with-footnote -left'>
+> #### The dotfiles repo
+> You can keep this repository anywhere you like, such as your projects 
+directory.
 
 ```
 ~/dotfiles
@@ -29,14 +36,15 @@ also put subdirectories in if you like, such as `vim` and `aria2` here below.
  │   └── ...
  └── ...
 ```
+</div>
 
 ### Create an install script
-Then add this script as `install.sh`. This will link each of the files into the 
-home folder.
+Then add this script as `install.sh`. Be sure to `chmod +x install.sh` 
+afterwards.
 
 <div class='with-footnote -left'>
-> Save this as `install.sh`.
-> Be sure to `chmod +x install.sh` afterwards.
+> #### install.sh
+> This works by making `ln -nfs` symlinks of each file into your home directory.
 
 ```shell
 #!/usr/bin/sh
@@ -51,6 +59,7 @@ done
 </div>
 
 ### Run it
+
 When you run the install script, it will link the files from the current 
 directory into your home directory (eg: `/home/rsc/dotfiles/ackrc` into 
     `~/.ackrc`).
