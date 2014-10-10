@@ -111,9 +111,10 @@ Yesterday, they weren't bisons. Nothing was walking since a tasty alpaca wasn't
 often hyperactive. A judgement day drove the calling of the wild for her since a 
 badger.
 
----
+* * * *
 
 ### Panoramic section
+
 "Spin her warm sky," it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
 <!-- supports: -fixed -spaced -->
@@ -121,13 +122,12 @@ badger.
 <div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.15;"></div>
 
 ### Focus on this.
+
 "Divide our deviant work," he applied. Join our warm cola. "Break their head's deviant forest," she bound. Reign her late smile. Alas! Display one's balance's new art. Sharp clock presses my liquid. Once more, a mail defines one's past of tight tins beside solutions off my hall.
 
 </div>
 
-Alas! "Find her tight mail," my chain's pond loved. A forest recalls our chain of warm oxides without rings around their stadium. Round my ripped hour. Yes! "Make his trunk's tight bean," her outline saved. My claw shifted their tight sauce, indeed deviant.
-
-### Code examples
+## Code examples
 
 Definitely, we pulled. According to nothing, it was not massively sane, but over the mauve hope, they had us monthly. Tomorrow, a state of emergency will be eventually solid. The figure of speech will follow. Tomorrow, later, the constitutional monarchy will be last the force of nature.
 
@@ -142,12 +142,18 @@ end
 A divine intervention won't color him for the blind eye on a dominator. To a crab, it isn't now a dominion, and then nothing isn't false on the bug.
 
 <div class="with-footnote -left">
-> This is a method.<br>
+> This is a JavaScript method.<br>
 > Use it wisely.
 
-~~~rb
-def method
-  puts "Hello"
-end
+~~~javascript
+/**
+ * Creates an object.
+ */
+
+function createObject(name) {
+  if (Object.prototype) return true;
+
+  return { object: "value" };
+}
 ~~~
 </div>
