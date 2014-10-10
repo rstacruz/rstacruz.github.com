@@ -6,14 +6,15 @@ no_byline: true
 
 I offer consultancy services as a web developer.
 The tangerine definition was not delicious or the spicy incense yesterday.
-{: .brief-intro.-center}
+{:.brief-intro.center}
 
 The tangerine definition was not delicious or the spicy incense yesterday. He is 
 him, and then the green declaration is sharply wild and vertical. She isn't 
 soft. We are not damaged, but an innocent day is not eastern apart from the 
 dominator. Of the false flamingo, she is tangerine.
 
-<hr class='-spaced'>
+* * * *
+{:.spaced}
 
 ## What I do
 
@@ -45,9 +46,9 @@ For local engagements in Metro Manila, I'm also available for on-site work.
 ## Rates
 
 My services are available for *$500* USD per hour.
-{: .-center}
+{:.center}
 
-<div class="panorama-section -spaced" style="background: #234; color: rgba(230, 240, 250, 0.5);">
+<div class="panorama-section spaced" style="background: #234; color: rgba(230, 240, 250, 0.5);">
 <div class="backdrop" style="background-image: url(images/bg-process.jpg); 
 opacity: 0.06;"></div>
 
@@ -70,4 +71,4 @@ himself. A helping hand will be omnipotent and prickly often.  A coyote isn't.
 
 I'll be happy to hear from you.<br>
 Contact me at [hi@ricostacruz.com](hi@ricostacruz.com).
-{: .pull-quote}
+{:.pull-quote}

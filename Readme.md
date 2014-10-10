@@ -23,13 +23,15 @@ Markdown reference
 ### Block variants
 
 These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`, 
-      and so on... even `hr`.
+      and so on... even `hr`. (See `standard-block.sass`)
 
- - `.-wide` - makes it wider.
- - `.-spaced` - big spaces around it.
- - `.-center` - text align center.
+ - `.wide` - makes it wider.
+ - `.spaced` - big spaces around it.
+ - `.center` - text align center.
 
 ### Blocks
+
+Custom blocks. (See `block.*.sass`)
 
  - `.brief-intro` - a large paragraph.
  - `.pull-quote` - pull quote.
