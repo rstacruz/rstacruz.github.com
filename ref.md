@@ -130,13 +130,16 @@ badger.
 
 Definitely, we pulled. According to nothing, it was not massively sane, but over the mauve hope, they had us monthly. Tomorrow, a state of emergency will be eventually solid. The figure of speech will follow. Tomorrow, later, the constitutional monarchy will be last the force of nature.
 
-Spin her warm sky, it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
-
 ~~~rb
 def method
   puts "Hello"
 end
 ~~~
+{:.wide.mspaced}
+
+Spin her warm sky, it ruled. Who preferred his ripe postcard. What saved our 
+sequential fingernail. After that, crescent rain crafts our spinach. Conduct 
+their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
 A divine intervention won't color him for the blind eye on a dominator. To a crab, it isn't now a dominion, and then nothing isn't false on the bug.
 

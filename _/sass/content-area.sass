@@ -1,0 +1,192 @@
+/*
+ * content area:
+ * describes any container (like `.post-content`) that has markdown in it.
+ */
+
+%content-area
+  line-height: 1.65
+
+/*
+ * Inlines
+ */
+
+%content-area
+  a, a:visited
+    color: $grey
+    text-decoration: none
+    border-bottom: solid 2px rgba($black, 0.1)
+    padding-bottom: 0
+
+  a:hover
+    color: $accent
+    border-bottom: solid 2px rgba($accent, 1.0)
+    transition: all 0 linear
+
+  b, strong
+    font-weight: bold
+    font-family: $fira
+    color: $xblack
+
+  code, em, i
+    color: #444
+    font-size: 0.85em
+    font-family: $serif
+    font-style: italic
+    padding: 3px 1px
+
+/*
+ * Standard blocks:
+ * Restrict the width and give it margin. See `%standard-block`.
+ */
+
+%content-area
+  >
+    p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block, .pull-quote, hr
+      @extend %standard-block
+  
+/*
+ * Block-in-blocks:
+ * Less margins, different header appearances.
+ */
+
+%content-area blockquote,
+%content-area li
+  >
+    p, ul, ol, article, blockquote, pre, h2, h3, h4, h5, .block
+      padding: 0
+      margin: $margin 0
+      &:first-child
+        margin-top: 0
+  >
+    h2, h3, h4
+      display: block
+      font-weight: bold
+      font-family: $fira
+      color: $xblack
+      font-size: 1em
+      margin: 0
+      + p
+        margin-top: 0
+
+    h4
+      color: $grey
+
+/*
+ * Lists
+ */
+
+%content-area
+  ol li
+    list-style: decimal outside
+
+  ul li
+    list-style: disc outside
+
+  ol li, ul li
+    margin-left: 2em
+
+/*
+ * Images
+ */
+
+%content-area
+  p > img
+    width: 100%
+
+/*
+ * Horizontal lines
+ */
+
+%content-area
+  hr
+    display: block
+    width: 80px
+    background: $line
+    height: 1px
+    border: 0
+    margin: ($margin * 2) auto
+
+  hr.stars
+    height: auto
+    background: transparent
+    text-align: center
+    width: auto
+    text-align: center
+
+    &:before
+      content: '* * * *'
+      font-family: $fira
+      font-size: 0.8em
+      white-space: nowrap
+      letter-spacing: 6px
+
+      position: relative
+      top: 0.2em
+
+/*
+ * Big heading
+ */
+
+%content-area
+  h2,
+  .pull-quote
+    font-family: $serif
+    font-weight: 300
+    line-height: 1.6
+    font-style: italic
+    color: $black
+    max-width: 800px
+    text-align: center
+
+  .pull-quote
+    $fs: 1.6em
+    font-size: $fs
+    margin-top: ($margin / $fs) * 1
+    margin-bottom: ($margin / $fs) * 1
+    @media (min-width: $xs-max)
+      margin-top: ($margin / $fs) * 2.5
+      margin-bottom: ($margin / $fs) * 2.5
+
+  h2
+    $fs: 1.8em
+    font-size: $fs
+    margin-top: ($margin / $fs) * 1
+    margin-bottom: ($margin / $fs) * 1
+    @media (min-width: $xs-max)
+      margin-top: ($margin / $fs) * 3
+      margin-bottom: ($margin / $fs) * 2
+
+/*
+ * Small heading
+ */
+
+%content-area
+  h3
+    font-weight: bold
+    font-family: $fira
+    font-size: 1.2em
+    color: $xblack
+    margin-top: $margin * 1.5
+
+  h3 + p
+    margin-top: ($margin * -1.2)
+
+/*
+ * Code
+ */
+
+%content-area
+  pre > code
+    @extend %code-block
+
+/*
+ * Blockquote
+ */
+
+%content-area
+  > blockquote
+    border-left: solid 2px $line
+    padding-left: $margin
+    color: $grey
+    max-width: ($width - 40px)
+    font-style: italic
