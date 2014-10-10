@@ -18,6 +18,7 @@ These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`,
       and so on... even `hr`. (See `standard-block.sass`)
 
  - `.wide` -- makes it wider.
+ - `.mspaced` -- semi-big spaces around it.
  - `.spaced` -- big spaces around it.
  - `.center` -- text align center.
 
@@ -26,12 +27,17 @@ These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`,
 Custom blocks. The block variants above should also apply to these. (See `block.*.sass`)
 
  - `.brief-intro` -- a large paragraph.
- - `.full-image` -- big images.
+ - `.full-image` -- big images. (variants: `.stretched`)
  - `.pull-quote` -- pull quote.
  - `.panorama-section` -- panoramic section. (variants: `.fixed`)
  - `hr` -- horizontal rule. (variants: `.stars`)
  - `.with-footnote` -- has a caption. put a blockquote inside it. (variants: 
      `.left`, `.right`)
+
+### Post options
+
+ - `headline_class` - class for the headline
+ - `secret` - set to *true* to keep it from listings
 
 * * * *
 {:.spaced}

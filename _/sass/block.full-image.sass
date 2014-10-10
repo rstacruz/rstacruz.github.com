@@ -1,9 +1,26 @@
-.full-image
+.full-image,
+p.full-image
   &, &.full-image
     max-width: 10000px
+    overflow: hidden
     padding-left: 0
     padding-right: 0
     text-align: center
 
   > img
+    margin: 0 auto
+    display: block
+    background: #eee
+
+  > img
+    width: auto
+
+  &.stretched > img
     width: 100%
+
+  &.crop
+    border-bottom: solid 1px #ccc
+    overflow: hidden
+
+    > img
+      margin-bottom: -45px

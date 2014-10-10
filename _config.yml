@@ -44,3 +44,4 @@ defaults:
       path: ""
     values:
       layout: "post"
+      tags: []

@@ -17,3 +17,9 @@ ready
 
 - `/pages/ref.html` - style references
 
+## TODO
+
+- [ ] figure out what to do with tags.
+- [ ] move pages and references.
+- [ ] better index of items.
+- [ ] author footer.

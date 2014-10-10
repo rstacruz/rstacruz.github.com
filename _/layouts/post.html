@@ -15,7 +15,7 @@ html_class: layout-post
 </div>
 
 <div class="post-item">
-  <div class="post-headline">
+  <div class="post-headline {{ page.headline_class }}">
     <h1>
       <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
     </h1>
@@ -42,5 +42,8 @@ html_class: layout-post
   -->
 </div>
 
+{% include about_the_author.html %}
+
 {% include end.html %}
+
 

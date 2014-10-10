@@ -79,7 +79,10 @@ directory into your home directory (eg: `/home/rsc/dotfiles/ackrc` into
 
 * * * *
 
-## Share your setup!
+## Share and learn!
 
-There are many dotfile repositories out there in GitHub. Share yours, too! Just 
-be sure you don't keep any secrets in there (like `~/.ssh`).
+There are [many dotfile repositories][search] out there in GitHub. Have a look
+at some of them to take inspiration from. When you're ready, share yours, too!
+Just be sure you don't keep any secrets in there (like `~/.ssh`).
+
+[search]: https://github.com/search?utf8=%E2%9C%93&q=dotfiles

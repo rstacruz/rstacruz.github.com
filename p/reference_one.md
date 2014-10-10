@@ -9,10 +9,10 @@ Brief paragraph. Due to a Portuguese day, a juicy coconut was not never the blue
 clam since a dish of the day did smile. The diagonal nightingale can change 
 herself to him while a rock is noticing. It was not white once. A calling of the 
 wild is nowadays hot.
-{: .brief-intro.center}
+{:.brief-intro.center}
 
 ![Image](http://lorempixel.com/1440/600/city/9)
-{: .full-image.spaced}
+{:.full-image.stretch.spaced}
 
 ## Second level header
 
@@ -119,7 +119,7 @@ badger.
 "Spin her warm sky," it ruled. Who preferred his ripe postcard. What saved our sequential fingernail. After that, crescent rain crafts our spinach. Conduct their recent grin. Who moded one's focal state. Lift his chain's ripe might.
 
 <div class="panorama-section" style="background: #123">
-<div class="backdrop" style="background-image: url(images/bg-process.jpg); opacity: 0.06;"></div>
+<div class="backdrop" style="background-image: url(/images/bg-process.jpg); opacity: 0.06;"></div>
 
 ### Focus on this.
 
