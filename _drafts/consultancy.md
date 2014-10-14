@@ -1,7 +1,7 @@
 ---
 title: Consultancy
 layout: post
-no_byline: true
+show_byline: false
 ---
 
 I offer consultancy services as a web developer.

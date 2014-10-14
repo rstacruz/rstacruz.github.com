@@ -19,8 +19,7 @@ html_class: layout-post
     <h1>
       <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
     </h1>
-    {% if page.no_byline %}
-    {% else %}
+    {% if page.show_byline != false %}
     <h5>
       <span class='author'>{{ site.meta.author }}</span>
       &middot;
@@ -42,7 +41,9 @@ html_class: layout-post
   -->
 </div>
 
-{% include about_the_author.html %}
+{% if page.show_footer != false %}
+  {% include about_the_author.html %}
+{% endif %}
 
 {% include end.html %}
 

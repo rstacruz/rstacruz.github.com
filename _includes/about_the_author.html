@@ -6,4 +6,19 @@
   <h3>@rstacruz</h3>
   <p>I'm Rico Sta. Cruz, a web developer. You are reading my blog.
   Thanks for reading.</p>
+
+  <div class='meta'>
+    <div class='column'>
+      {% if page.next %}
+        <div class='related next'>
+          Next: <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+        </div>
+      {% endif %}
+      {% if page.previous %}
+        <div class='related previous'>
+          Previous: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
