@@ -2,6 +2,7 @@
 title: Consultancy
 layout: post
 show_byline: false
+show_footer: false
 ---
 
 I offer consultancy services as a web developer.
