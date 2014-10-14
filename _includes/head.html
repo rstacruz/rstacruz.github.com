@@ -48,4 +48,4 @@
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.meta.title }}" href="/atom.xml">
 
-  {% if site.analytics %}<script>if(~location.hostname.indexOf("{{site.hostname}}")){var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.analytics.id }}"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>{% endif %}
+  {% if site.analytics %}<script>if(~location.hostname.indexOf("{{site.meta.hostname}}")){var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.analytics.id }}"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()}</script>{% endif %}
