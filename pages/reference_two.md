@@ -27,7 +27,7 @@ These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`,
 Custom blocks. The block variants above should also apply to these. (See `block.*.sass`)
 
  - `.brief-intro` -- a large paragraph.
- - `.full-image` -- big images. (variants: `.stretched`)
+ - `.full-image` -- big images. (variants: `.stretch`)
  - `.pull-quote` -- pull quote.
  - `.panorama-section` -- panoramic section. (variants: `.fixed`)
  - `hr` -- horizontal rule. (variants: `.stars`)

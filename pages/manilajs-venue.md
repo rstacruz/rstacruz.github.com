@@ -1,5 +1,6 @@
 ---
 title: Host our Manila.js meetup!
+show_header: false
 show_byline: false
 show_footer: false
 ---
@@ -9,7 +10,7 @@ information on our meetups.
 {:.brief-intro.center}
 
 ![](http://manilajs.com/images/header/ms.jpg)
-{:.full-image.stretch}
+{:.full-image.stretch.mspaced}
 
 ### Schedule
 
@@ -55,3 +56,9 @@ Our website is [manilajs.com](http://manilajs.com)—feel free to take a look
 around.
 
 * * * *
+
+We're really excited to have your office host our meetup.
+Please drop me a note at [hi@ricostacruz.com].
+{:.pull-quote}
+
+[hi@ricostacruz.com]: hi@ricostacruz.com

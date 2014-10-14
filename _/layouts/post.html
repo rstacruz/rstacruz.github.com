@@ -8,11 +8,13 @@ html_class: layout-post
 
 {% include body.html %}
 
-<div class='blog-header'>
-  <div>
-    <h1><a href="/">{{ site.meta.name }}</a></h1>
+{% if page.show_header != false %}
+  <div class='blog-header'>
+    <div>
+      <h1><a href="/">{{ site.meta.name }}</a></h1>
+    </div>
   </div>
-</div>
+{% endif %}
 
 <div class="post-item">
   <div class="post-headline {{ page.headline_class }}">
