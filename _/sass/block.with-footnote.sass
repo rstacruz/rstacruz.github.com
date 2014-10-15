@@ -9,6 +9,10 @@
     width: $width
     margin: 0 auto
 
+    // cancel padding of conent-area
+    padding-left: 0
+    padding-right: 0
+
   @media (max-width: $xs-max)
     padding: 0
     margin: 0
@@ -23,17 +27,24 @@
     font-size: 0.75em
     line-height: 1.5
 
-    border-top: solid 1px $line
-    border-bottom: solid 1px $line
-    padding: 20px 10px 0 20px
+    > :last-child
+      margin-bottom: 0
 
     >
       h2, h3, h4
         color: $black
         font-family: $fira
 
+  @media (max-width: $xs-max)
+    > blockquote
+      padding: 10px
+      border: solid 1px rgba($line, 0.5)
+      border-radius: 2px
+      margin-bottom: -10px
+      text-align: right
+
   // TODO: sucks
-  @media (min-width: $xs-max)
+  @media (min-width: $xs-max+1)
     > blockquote
       border: 0
       border-top: solid 1px rgba($line, 0.5)

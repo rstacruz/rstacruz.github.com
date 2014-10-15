@@ -11,6 +11,14 @@
  */
 
 %content-area
+  &
+    padding-left: 20px
+    padding-right: 20px
+
+  @media (max-width: $xs-max)
+    padding-left: 15px
+    padding-right: 15px
+
   a, a:visited
     color: $grey
     text-decoration: none
@@ -116,6 +124,9 @@
     border: 0
     margin: ($margin * 2) auto
 
+    @media (max-width: $xs-max)
+      margin: ($margin * 1.5) auto
+
   hr.stars
     height: auto
     background: transparent
@@ -153,7 +164,7 @@
     font-size: $fs
     margin-top: ($margin / $fs) * 1
     margin-bottom: ($margin / $fs) * 1
-    @media (min-width: $xs-max)
+    @media (min-width: $xs-max+1)
       margin-top: ($margin / $fs) * 2.5
       margin-bottom: ($margin / $fs) * 2.5
 
@@ -162,8 +173,10 @@
     font-size: $fs
     margin-top: ($margin / $fs) * 1
     margin-bottom: ($margin / $fs) * 1
-    @media (min-width: $xs-max)
-      margin-top: ($margin / $fs) * 3
+    @media (min-width: $xs-max+1)
+      $fs: 1.6em
+      font-size: $fs
+      margin-top: ($margin / $fs) * 2
       margin-bottom: ($margin / $fs) * 2
 
 /*
@@ -171,14 +184,18 @@
  */
 
 %content-area
-  h3
+  h3, h4
     font-weight: bold
     font-family: $fira
     font-size: 1.2em
     color: $xblack
     margin-top: $margin * 1.5
 
-  h3 + p
+    @media (max-width: $xs-max)
+      margin-top: $margin
+
+  h3 + p,
+  h4 + p
     margin-top: ($margin * -1.2)
 
 /*

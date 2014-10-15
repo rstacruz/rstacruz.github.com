@@ -12,7 +12,7 @@ wild is nowadays hot.
 {:.brief-intro.center}
 
 ![Image](http://lorempixel.com/1440/600/city/9)
-{:.full-image.stretch.spaced}
+{:.full-image.stretch.mspaced}
 
 ## Second level header
 

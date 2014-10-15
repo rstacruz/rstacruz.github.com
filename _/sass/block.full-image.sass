@@ -15,8 +15,15 @@ p.full-image
   > img
     width: auto
 
+  &.stretch
+    background: #eee
+
+  &.stretch.stretch
+    @extend .full-bleed
+
   &.stretch > img
     width: 100%
+    max-width: 1680px
 
   &.crop
     border-bottom: solid 1px #ccc
