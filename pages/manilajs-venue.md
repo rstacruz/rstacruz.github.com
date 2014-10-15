@@ -5,8 +5,8 @@ show_byline: false
 show_footer: false
 ---
 
-Manila.js is always looking for venues to hold our events. Here's some basic 
-information on our meetups.
+Manila.js, the Philippine JavaScript developers meetup group, is always looking 
+for venues to hold our events. Here's some basic information on our meetups.
 {:.brief-intro.center}
 
 ![](http://manilajs.com/images/header/ms.jpg)
@@ -14,8 +14,8 @@ information on our meetups.
 
 ### Schedule
 
-`November 9th, Friday`. The event is typically scheduled on the first Friday of 
-the month.
+Our next meetup is on `November 7th, Friday`. The event is typically scheduled 
+on the first Friday of the month.
 
 ### Attendees
 
