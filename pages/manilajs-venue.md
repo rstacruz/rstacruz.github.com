@@ -30,18 +30,27 @@ Our programme takes 2 hours. The usual time slot is 7pm to 9pm.
 There will be 3 talks, each taking 20 minutes. There will be two 20 minute 
 breaks in between for socializing and snacks.
 
-### Seating
-Seats for the attendees are highly preferred, but they often don't mind standing 
-up if needed.
+* * * *
+{:.spaced}
 
-### Tech requirements
+What we need
+------------
+
+### Seats:
+Seats for the attendees are highly preferred, but they often don't mind standing up if needed.
+
+### Tech requirements:
 Video projector and microphone equipment are preferred, but not required.
 
-### Registration booth
-We'll have volunteers man the registration booths in the front desk. This is to 
-count their attendance and provide the attendees with name tags.
+### Registration booth area:
+We'll have volunteers man the registration booths in the front desk. This is to count their attendance and provide the attendees with name tags.
 
-### Food
+* * * *
+{:.spaced}
+
+What about food?
+----------------
+
 Manila.js is an effort by the community, for the community. Our food is 
 typically sponsored by some generous attendees and local startups. As food 
 sponsors, they get rights to being promoted in Manila.js announcements.
@@ -51,11 +60,12 @@ Some attendees would like to socialize after the event, so we often designate a
 nearby bar so they can hang out afterwards. This is often a KKB affair, though 
 some generous patrons offer to sponsor drinks for people as well.
 
-### Website
+* * * *
+{:.spaced}
+
 Our website is [manilajs.com](http://manilajs.com)—feel free to take a look 
 around.
-
-* * * *
+{:.center}
 
 We're really excited to have your office host our meetup.
 Please drop me a note at [hi@ricostacruz.com].

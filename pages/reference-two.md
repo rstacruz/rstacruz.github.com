@@ -5,17 +5,14 @@ secret: true
 ---
 
 Brief introduction.
-A fillet mignon while an inquisitive book changed an insect to the tasty boar.
-The arrangement stood without anything. We won't be giving themselves to
-themselves.
+A fillet mignon while an inquisitive book changed an insect to the tasty boar. The arrangement stood without anything. We won't be giving themselves to themselves.
 {:.brief-intro.center}
 
 * * * *
 
 ### Block variants
 
-These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`, 
-      and so on... even `hr`. (See `standard-block.sass`)
+These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`, and so on... even `hr`. (See `standard-block.sass`)
 
  - `.wide` -- makes it wider.
  - `.mspaced` -- semi-big spaces around it.
@@ -27,7 +24,7 @@ These variants work on almost all content blocks: `p`, `h2..h6`, `blockquote`,
 Custom blocks. The block variants above should also apply to these. (See `block.*.sass`)
 
  - `.brief-intro` -- a large paragraph.
- - `.full-image` -- big images. (variants: `.stretch`)
+ - `.full-image` -- big images. (variants: `.stretch`, `.crop`)
  - `.pull-quote` -- pull quote.
  - `.panorama-section` -- panoramic section. (variants: `.fixed`)
  - `hr` -- horizontal rule. (variants: `.stars`)
@@ -38,6 +35,9 @@ Custom blocks. The block variants above should also apply to these. (See `block.
 
  - `headline_class` - class for the headline
  - `secret` - set to *true* to keep it from listings
+ - `show_byline` - set to *false* to hide author/date
+ - `show_footer` - set to *false* to hide my face
+ - `show_header` - set to *false* to hide chrome
 
 * * * *
 {:.spaced}

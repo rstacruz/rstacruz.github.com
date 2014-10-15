@@ -8,17 +8,25 @@
   Thanks for reading.</p>
 
   <div class='meta'>
+    {% if page.next %}
+      <div class='column related next'>
+        Next article:<br>
+        <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+      </div>
+    {% endif %}
+    {% if page.previous %}
+      <div class='column related previous'>
+        Previously:<br>
+        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+      </div>
+    {% endif %}
     <div class='column'>
-      {% if page.next %}
-        <div class='related next'>
-          Next: <a href="{{ page.next.url }}">{{ page.next.title }}</a>
-        </div>
-      {% endif %}
-      {% if page.previous %}
-        <div class='related previous'>
-          Previous: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-        </div>
-      {% endif %}
+      Follow me on Twitter.<br>
+      <a href="">@rstacruz</a>
+    </div>
+    <div class='column'>
+      Thanks for reading.<br>
+      <a href="">Search</a>
     </div>
   </div>
 </div>

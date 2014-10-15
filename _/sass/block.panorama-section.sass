@@ -25,16 +25,23 @@
 
   /* variants */
 
-  &.-spaced
-    @media (min-width: $xs-max)
-      margin-top: $margin * 4
-      margin-bottom: $margin * 4
-
-  &.-fixed .backdrop
+  &.fixed .backdrop
     background-attachment: fixed
 
-  &
+  &:not(.light)
     color: rgba(white, 0.7)
+    h2, h3, strong, em, i, code
+      color: white
+
+  &.mspaced
+    @media (min-width: $xs-max)
+      margin-top: ($margin * 2)
+      margin-bottom: ($margin * 2)
+
+  &.spaced
+    @media (min-width: $xs-max)
+      margin-top: ($margin * 4)
+      margin-bottom: ($margin * 4)
 
   > *
     position: relative
@@ -49,6 +56,3 @@
     background-position: center center
     background-size: cover
     z-index: 0
-
-  h2, h3, strong, em, i, code
-    color: white

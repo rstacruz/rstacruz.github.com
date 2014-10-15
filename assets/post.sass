@@ -48,12 +48,17 @@ html.loaded
 html, body
   margin: 0
   padding: 0
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
 
 html
   background: $bg
 
-*
+a
   transition: all 250ms linear
+
+a:hover
+  transition: all 0 linear
 
 body
   &
