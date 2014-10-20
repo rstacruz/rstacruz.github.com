@@ -34,7 +34,7 @@ title_tag: Rico Sta. Cruz
         {% for post in site.posts %}
           {% if post.secret %}
           {% else %}
-            <a href="{{ post.url }}" class='post-item'>
+            <a href="{{ post.url }}" class='article-item'>
               <strong class='title'>{{ post.title }}</strong>
               <span class='date'>{{ post.date | date_to_string }}</span>
             </a>
