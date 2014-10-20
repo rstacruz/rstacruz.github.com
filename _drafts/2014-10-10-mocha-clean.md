@@ -1,7 +1,7 @@
 ---
 title: Cleaner Mocha stack traces
 date: 2014/10/10
-layout: post
+layout: article
 tags: [Development, JavaScript]
 ---
 

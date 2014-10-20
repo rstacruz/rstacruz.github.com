@@ -1,7 +1,7 @@
 ---
 title: "How to host static sites in Heroku"
 description: "Style reference"
-layout: post
+layout: article
 ---
 
 * * * *

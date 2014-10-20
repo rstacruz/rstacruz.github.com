@@ -43,5 +43,5 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "post"
+      layout: "article"
       tags: []

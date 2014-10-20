@@ -1,7 +1,7 @@
 ---
 title: "Untangle your dotfiles"
 description: "How to use dotfiles for fun and profit"
-layout: post
+layout: article
 ---
 
 There are many solutions for managing your home directory's dot files today.  

@@ -1,6 +1,6 @@
 ---
 title: Reference Part II
-layout: post
+layout: article
 secret: true
 ---
 

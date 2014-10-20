@@ -1,6 +1,6 @@
 ---
 title: Consultancy
-layout: post
+layout: article
 show_byline: false
 show_footer: false
 ---
