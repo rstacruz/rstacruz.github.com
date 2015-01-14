@@ -6,8 +6,9 @@
 
 - `make start` to start server
 
-- iterate on the `develop` branch (css changes, etc) and merge to master when 
-ready
+- iterate on the `develop` branch (css changes, etc)
+  
+- push to `master` when ready
 
 - bundler (`_/Gemfile`) is here to keep github-pages gems consistent
 
