@@ -14,7 +14,7 @@ for venues to hold our events. Here's some basic information on our meetups.
 
 ### Schedule
 
-Our next meetup is on `November 7th, Friday`. The event is typically scheduled 
+Our next meetup is on `Feb 6, Friday`. The event is typically scheduled 
 on the first Friday of the month.
 
 ### Attendees
