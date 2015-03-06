@@ -10,8 +10,10 @@ I am an open-source contributor and I like making things that help people with
 their work. I am the author of [Transit], [Js2coffee], [Nprogress], [Flatdoc], 
       [Mina], [Ubuntu Dust], [Backbone Patterns], and [many more][Github].
 
-I hosted [JSConf Asia 2013], manage the [Manila.js] community, and regularly 
+I spoke in [CSSConf Asia 2014], hosted [JSConf Asia 2013], manage the [Manila.js] community, and often 
 speak in conferences.
+
+[I blog about web development](http://ricostacruz.com/til).
 
 __[You should follow me on Twitter.][twitter]__ You can write to me through
 [hi@ricostacruz.com].
@@ -27,6 +29,7 @@ __[You should follow me on Twitter.][twitter]__ You can write to me through
 [Backbone Patterns]: https://github.com/rstacruz/backbone-patterns
 [hi@ricostacruz.com]: mailto:hi@ricostacruz.com
 [Manila.js]: http://manilajs.com/
+[CSSConf Asia 2014]: http://2014.cssconf.asia/
 [Jsconf Asia 2013]: http://2013.jsconf.asia/
 [Philippine Web Designers Organization]: http://pwdo.org/
 [Github]: http://github.com/rstacruz
