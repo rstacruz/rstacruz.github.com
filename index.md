@@ -8,7 +8,7 @@ JavaScript, Ruby, and UI design.
 
 I am an open-source contributor and I like making things that help people with 
 their work. I am the author of [Transit], [Js2coffee], [Nprogress], [Flatdoc], 
-      [Mina], [Ubuntu Dust], [Backbone Patterns], and [many more][Github].
+      [rscss], [Mina], [Backbone Patterns], and [many more][Github].
 
 I spoke in [CSSConf Asia 2014], hosted [JSConf Asia 2013], manage the [Manila.js] community, and often 
 speak in conferences.
@@ -20,8 +20,9 @@ __[You should follow me on Twitter.][twitter]__ You can write to me through
 
 [Transit]: http://ricostacruz.com/jquery.transit
 [Flatdoc]: http://ricostacruz.com/flatdoc
-[Js2coffee]: http://js2coffee.org
+[js2coffee]: http://js2.coffee
 [NProgress]: http://ricostacruz.com/nprogress
+[rscss]: http://rscss.io
 [Mina]: https://github.com/mina-deploy/mina
 [Sinatra Assetpack]: http://github.com/rstacruz/sinatra-assetpack
 [Ubuntu Dust]: https://wiki.ubuntu.com/Artwork/Incoming/DustTheme
