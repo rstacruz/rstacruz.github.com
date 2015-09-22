@@ -2,6 +2,8 @@
 layout: landing
 ---
 
+Rico Sta. Cruz — Open Source Developer, [Mashup Garage](http://www.mashupgarage.com)
+
 Rico Sta. Cruz is the web developer/designer behind many popular open source 
 JavaScript libraries in use today. He is one of the [top contributors] at 
 GitHub, host of [JSConf Asia 2013], and the head organizer of the Philippine 
