@@ -10,7 +10,7 @@ JavaScript community [Manila.js].
 * __Site:__ [ricostacruz.com]
 * __Twitter:__ [@rstacruz](https://twitter.com/rstacruz)
 * __GitHub:__ [rstacruz](https://github.com/rstacruz)
-* __Picture:__ [see image](images/avatar.jpg)
+* __Picture:__ [one](images/picture1.jpg), [two](images/picture2.png)
 
 [top contributors]: http://git.io/top
 [ricostacruz.com]: http://ricostacruz.com
