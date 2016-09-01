@@ -7,7 +7,7 @@ I am a web developer helping make the world a better place through
 JavaScript, Ruby, and UI design.
 
 I am an open-source contributor and I like making things that help people with 
-their work. I am the author of [Transit], [Js2coffee], [Nprogress], [Flatdoc], 
+their work. I am the author of [pnpm], [Transit], [Js2coffee], [Nprogress], [Flatdoc], 
       [rscss], [Mina], [Backbone Patterns], and [many more][Github].
 
 I spoke in [CSSConf Asia 2014], hosted [JSConf Asia 2013], manage the [Manila.js] community, and often 
@@ -20,6 +20,7 @@ __[You should follow me on Twitter.][twitter]__ You can write to me through
 
 [Transit]: http://ricostacruz.com/jquery.transit
 [Flatdoc]: http://ricostacruz.com/flatdoc
+[pnpm]: https://github.com/rstacruz/pnpm
 [js2coffee]: http://js2.coffee
 [NProgress]: http://ricostacruz.com/nprogress
 [rscss]: http://rscss.io
