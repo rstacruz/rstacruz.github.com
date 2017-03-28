@@ -13,7 +13,7 @@ their work. I am the author of [pnpm], [Transit], [Js2coffee], [Nprogress], [Fla
 I spoke in [CSSConf Asia 2014], hosted [JSConf Asia 2013], manage the [Manila.js] community, and often 
 speak in conferences.
 
-[I blog about web development](http://ricostacruz.com/til).
+[I blog about web development](https://ricostacruz.com/til).
 
 __[You should follow me on Twitter.][twitter]__ You can write to me through
 [hi@ricostacruz.com].

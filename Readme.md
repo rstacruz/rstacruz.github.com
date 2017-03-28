@@ -1,6 +1,6 @@
 # hello.
 
-[ricostacruz.com](http://ricostacruz.com)
+[ricostacruz.com](https://ricostacruz.com)
 
 ## Dev notes
 
