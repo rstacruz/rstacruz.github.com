@@ -15,7 +15,7 @@ JavaScript community [Manila.js]. Today, he's the Chief Creative Officer at [Mas
 * __Site:__ [ricostacruz.com]
 * __Twitter:__ [@rstacruz](https://twitter.com/rstacruz)
 * __GitHub:__ [rstacruz](https://github.com/rstacruz)
-* __Picture:__ [here](images/picture3.jpg)
+* __Photos:__ [one](images/picture3.jpg), [two](images/picture2.png)
 
 [top contributors]: http://git.io/top
 [ricostacruz.com]: http://ricostacruz.com
