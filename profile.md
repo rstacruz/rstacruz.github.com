@@ -9,7 +9,7 @@ Open Source Developer, [Mashup Garage]
 
 Rico Sta. Cruz is the developer behind many popular open source 
 JavaScript libraries in use today. He is one of the [top contributors] at 
-GitHub, previously hosted of [JSConf Asia], organizer of the Philippine 
+GitHub, previously hosted of [JSConf Asia], and organized the Philippine 
 JavaScript community [Manila.js]. Today, he's the Chief Creative Officer at [Mashup Garage].
 
 * __Site:__ [ricostacruz.com]
