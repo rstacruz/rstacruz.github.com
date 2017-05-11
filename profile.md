@@ -2,6 +2,8 @@
 layout: landing
 ---
 
+<a href='images/picture3.jpg'><img src='images/picture3.jpg' width='128'></a>
+
 **Rico Sta. Cruz**<br>
 Open Source Developer, [Mashup Garage]
 
