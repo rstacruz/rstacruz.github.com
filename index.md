@@ -7,7 +7,7 @@ I am a web developer helping make the world a better place through
 JavaScript, Ruby, and UI design.
 
 I am an open-source contributor and I like making things that help people with 
-their work. I am the author of [pnpm], [Transit], [Js2coffee], [Nprogress], [Flatdoc], 
+their work. I am the author of [pnpm], [Transit], [Js2coffee], [Devhints], [Nprogress], [Flatdoc], 
       [rscss], [Mina], [Backbone Patterns], and [many more][Github].
 
 I spoke in [CSSConf Asia 2014], hosted [JSConf Asia 2013], manage the [Manila.js] community, and often 
@@ -35,3 +35,4 @@ __[You should follow me on Twitter.][twitter]__ You can write to me through
 [Jsconf Asia 2013]: http://2013.jsconf.asia/
 [Philippine Web Designers Organization]: http://pwdo.org/
 [Github]: http://github.com/rstacruz
+[Devhints]: https://devhints.io
